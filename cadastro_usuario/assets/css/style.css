@@ -45,5 +45,20 @@ body {
     font-size: 1.6rem;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    background-color: var(--color-cinza-500);
+    background-color: var(--color-cinza-600);
+}
+
+button {
+    border: none;
+    border-radius: 20px;
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    background-color: none;
+}
+
+p {
+    border: 1px solid red;
 }

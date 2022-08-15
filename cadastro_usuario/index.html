@@ -6,30 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/formulario.css">
+    <link rel="stylesheet" href="./assets/css/formulario_cadastro.css">
   </head>
   <body>
     <form action="" method="post">
       <h2>Crie sua conta</h2>
-      <div class="comum">
+      <div class="cad-user">
         <label for="name">Nome:</label>
-        <input type="text" name="name" id="name" placeholder="Nome" />
-        <p id="errorName">e</p>
+        <input type="text" name="name" id="name" placeholder="Nome" required />
+        <!-- <p id="errorName">e</p> -->
       </div>
-      <div class="comum">
+      <div class="cad-user">
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email" placeholder="Email" />
+        <input type="email" name="email" id="email" placeholder="Email" required />
         <p id="errorEmail">e</p>
       </div>
-      <div class="comum">
+      <div class="cad-user">
         <label for="password">Senha:</label>
-        <input type="password" name="password" id="password" placeholder="Senha"/>
-        <p id="errorPassword">r</p>
+        <input type="password" name="password" id="password" placeholder="Senha" required/>
+        <p id="errorPassword">e</p>
       </div>
 
-      <div class="sumbit-reset">
-        <button type="submit">Entrar</button>
-        <button type="reset">Limpar</button>
+      <div class="cad-user-sumbit-reset">
+        <div class="cad-user-butons-submit-reset">
+          <button type="submit">Entrar</button>
+          <button type="reset">Limpar</button>
+        </div>
+        <button>
+          Já tem uma conta?
+          <a href="#">Conecte-se</a>
+        </button>
       </div>
     </form>
 
