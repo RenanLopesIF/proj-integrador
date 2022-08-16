@@ -19,9 +19,18 @@
         <input class="senha" type="password" name="senha" placeholder="password">
         <div class="bt">
             <input type="button" value="continue" onclick="verificar()">
-            <input type="button" value="cadastre-se" onclick="cadastro()">
+
+            <input id="login-btn-cadastrar" type="button" value="cadastre-se">
         </div>
     </form>
+
+    <script>
+    function cadastrar() {
+        window.location = "<?= base_url('/cadastrar') ?>"
+    };
+
+    document.querySelector("#login-btn-cadastrar").onclick = cadastrar;
+    </script>
 </body>
 
 </html>
