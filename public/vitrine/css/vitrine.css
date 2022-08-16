@@ -1,0 +1,199 @@
+
+.vtr-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* position: fixed; */
+  width: 100%;
+  background-color: var(--color-cinza-700);
+  /* padding: 10px; */
+}
+
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.menu li a {
+  color: white;
+  padding: 10px;
+}
+
+.menu li a:hover {
+  background-color: var(--color-cinza-500);
+}
+
+.vtr-navigation a img {
+  width: 40px;
+}
+
+.vtr-text-principal {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 60px;
+}
+
+/* .navbar{
+  display: flex;
+  background-color:var(--color-cinza-400);
+  justify-content: space-evenly;
+  position: fixed;
+  top:0;
+  width: 100%;
+  font-size: 20px;
+}
+
+.nav-right{
+  text-align: right;
+  float:right;
+}
+
+.nav-right li {
+  display: inline;
+  float: left;
+  padding-left: 15px;
+}
+
+  .nav-right li a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color:white;
+}
+
+  .nav-right  li ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+  .nav-right li a:hover {
+  background-color: var(--color-cinza-500);
+}
+
+  .nav-right .active {
+  background-color: var(--color-cinza-700);
+} */
+.confirm{
+display: flex;
+align-items: center;
+width: 3%;
+padding-left: 1%;
+padding-right: 1%;
+/* height: 100%; */
+}
+.car{
+  /* display: flex;
+  align-items: center; */
+  width: 100%;
+  height: 100%;
+}
+.confirm:hover{
+  background-color: var(--color-cinza-500);
+}
+
+.section-1 {
+  padding: 40px;
+  background-color: var(--color-cinza-700);
+  background: url('https://portal.uern.br/wp-content/uploads/2018/11/BibliotecaPDF5-324x160.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 250px;
+  background-size: 100% 100%;
+  /* border: 1px solid darkred; */
+}
+h1, h2{
+  color: var(--color-amarelo-400);
+}
+/* .section-body{   
+    padding-top: 330px;
+    padding-left: 15px;
+    background-color: red;
+} */
+/* .section-body h4{
+    font-size: large;
+}
+.section-body ul {
+    list-style-type: none;
+    width: 18%;
+    background-color: #d6e4f0;
+    position: fixed;
+    height: auto;
+    overflow: auto;
+  } */
+  /* .section-body  li a {
+  display: block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+} */
+  
+  /* .section-body li a.active {
+  background-color: #04AA6D;
+  color: white;
+} */
+  
+  .section-body li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+  .image-holder{
+  border: 1px solid var( --color-cinza-900);
+  transition-duration:200ms;
+  transition-timing-function: ease-out;
+}
+  
+  .image-holder:hover {
+  border: 1px solid var( --color-cinza-500);
+  transform: scale(1.05,1.05);
+}
+.image-holder .info{
+  display: grid;
+  flex-direction: column;
+  color: white;
+  cursor: pointer;
+  justify-content: left;
+  /* text-align: justify; */
+  font-size: 12px;
+}
+.info li{
+  list-style: none;
+  width: 100%;
+  background-color: var( --color-cinza-400);
+}
+  .gallery{
+  display: flex;
+  flex-direction: row; 
+  column-gap: 20px;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+div.desc {
+  text-align: center;
+  width: 100%;
+}
+
+ .desc i{
+  float: left !important;
+  padding-left: 10px;
+}
+
+ .desc button{
+  float:right !important;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.gallery img{
+  height: 250px;
+  width:200px;
+}
