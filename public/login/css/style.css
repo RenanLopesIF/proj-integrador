@@ -39,3 +39,6 @@ body{
   --color-beje-800: #422f0b;
   --color-beje-900: #181000;
 }
+h1{
+  color: var( --color-amarelo-400);
+}
