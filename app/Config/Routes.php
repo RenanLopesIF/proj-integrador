@@ -37,6 +37,7 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Login::index');
 $routes->get('/cadastrar', 'CadastroUsuario::index');
+$routes->get('/cadastrar/inserir', 'CadastroUsuario::inserir');
 
 /*
  * --------------------------------------------------------------------
