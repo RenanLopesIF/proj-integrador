@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class TiposDeUsuarioModel extends Model
+class UsuariosModel extends Model
 {
     protected $table      = 'usuarios';
     protected $primaryKey = 'id';
@@ -23,4 +23,54 @@ class TiposDeUsuarioModel extends Model
     protected $validationRules    = [];
     protected $validationMessages = [];
     protected $skipValidation     = false;
+
+    public function insertOne($dados)
+    {
+        $db = \Config\Database::connect();
+        $enderecoModel = new \App\Models\EnderecosModel();
+        $credenciaisModel = new \App\Models\CredenciaisModel();
+
+        try {
+            $db->transBegin();
+
+            $endDados = [
+                "pais" => $dados['pais'],
+                "estado" => $dados['estado'],
+                "cidade" => $dados['cidade'],
+                "bairro" => $dados['bairro'],
+                "rua" => $dados['rua'],
+                "numero" => $dados['numero'],
+                "cep" => $dados['cep'],
+            ];
+            $idEndereco = $enderecoModel->insert($endDados);
+
+            $usuarioDados = [
+                "id_endereco" => $idEndereco,
+                "id_tipo_de_usuario" => 2,
+                "nome" => $dados["nome"],
+                "cpf" => $dados["cpf"],
+                "email" => $dados["email"],
+                "telefone" => $dados["telefone"],
+                "data_nascimento" => $dados["nascimento"]
+            ];
+            $idUsuario = $this->insert($usuarioDados);
+
+            $credenciaisDados = [
+                "username" => $dados["username"],
+                "id_usuario" => $idUsuario,
+                "senha" => $dados["password"]
+            ];
+            $credenciaisModel->insert($credenciaisDados);
+
+            if ($db->transStatus() === false) {
+                $db->transRollback();
+                return true;
+            } else {
+                $db->transCommit();
+                return false;
+            }
+        } catch (\Throwable $th) {
+            return false;
+        }
+    }
 }
