@@ -14,10 +14,11 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 .container{
-    width: 80%;
-    height: 90vh;/*mudar no final++*/
-    display: flex;
-    box-shadow: 5px 5px 10px rgba(0,0,0, .212);
+    /* width: 90%; */
+    /* height: 90vh;mudar no final++ */
+    display: grid;
+    grid-template-columns: .45fr .55fr;
+    /* box-shadow: 5px 5px 10px rgba(0,0,0, .212); */
 }
 .form-image{
     display: flex;
@@ -40,6 +41,11 @@ body{
     background-color: #fff;
     padding: 3rem;
 }
+
+#form{
+    padding: 40px 0 10px 10px;
+}
+
 .form-header{
     display: flex;
     margin-bottom: 3rem;
@@ -161,19 +167,17 @@ color: var(--color-beje-400);
 @media screen and (max-width:1064px){
     .container{
         width: 90%;
-        height: auto;
+        min-height: 100%;
+        flex: 1;
     }
     .input-group{
-        /* flex-direction: column; */
-       overflow-y: auto;
-        max-height: 10rem;
         padding-right: 5rem;
     }
     .gender-input{
         margin-top: 2rem;
     }
     .gender-group{
-        flex-direction: row;
+        flex-direction: column;
     }
     .gender-input{
         margin-top: 0.5rem;

@@ -16,90 +16,122 @@
         <div class="form-image">
             <img src="assets/img/moça_dog.svg" alt="">
         </div>
-        <div class="form">
-            <form action="#">
-                <div class="form-header">
-                    <div class="title">
-                        <h1>cadastre-se</h1>
-                    </div>
-                    <div class="login-button">
-                        <button type="button" class="btn btn-warning bttwo">Entrar</button>
-                        <!-- <button><a href="#">Entrar</a></button> -->
-                    </div>
+        <form id="form" action="<?= base_url("/cadastrar/inserir") ?>" method="POST">
+            <div class="form-header">
+                <div class="title">
+                    <h1>Cadastre-se</h1>
                 </div>
-                <div class="input-group">
-                    <div class="input-box">
-                        <label for="firstname">Nome</label>
-                        <input id="firstname" type="text" name="firstname" placeholder="Primeiro nome" required>
-                    </div>
-
-                    <!-- <div class="input-box">
-                        <label for="date">data de nascimento</label>
-                        <input id="date" type="date" name="confirmPassword" placeholder="Confimação" required>
-                    </div>  -->
-
-                    <div class="input-box">
-                        <label for="CPF">Informe o CPF</label>
-                        <input id="lastname" type="text" name="lastname" placeholder="CPF" required>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="email">E-mail</label>
-                        <input id="email" type="email" name="email" placeholder="Email" required>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="number">Celular</label>
-                        <input id="number" type="number" name="number" placeholder="(xx) xxxx-xxxx" required>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="password">Senha</label>
-                        <input id="password" type="password" name="password" placeholder="Senha" required>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="confirmPassword">Confra su senha</label>
-                        <input id="confirmPassword" type="confirmPassword" name="confirmPassword" placeholder="Confimação" required>
-                    </div>
-
-
-                    <!-- <div class="input-box">
-                        <label for="confirmPassword">Confra su senha</label>
-                        <input id="confirmPassword" type="confirmPassword" name="confirmPassword" placeholder="Confimação" required>
-                    </div> -->
-
+                <div class="login-button">
+                    <button type="button" class="btn btn-warning bttwo">Entrar</button>
+                    <!-- <button><a href="#">Entrar</a></button> -->
                 </div>
-                <div class="gender-inputs">
-                    <div class="gender-title">
-                        <h6>Gênero</h6>
-                    </div>
-                    <div class="gender-group">
-                        <div class="gender-input">
-                            <input type="radio" id="female" name="gender">
-                            <label for="female">Feminino</label>
-                        </div>
+            </div>
+            <div class="input-group">
 
-                        <div class="gender-input">
-                            <input type="radio" id="male" name="gender">
-                            <label for="male">masculino</label>
-                        </div>
-                        <div class="gender-input">
-                            <input type="radio" id="others" name="gender">
-                            <label for="others">outros</label>
-                        </div>
-                        <!-- <div class="gender-input">
+                <div class="input-box">
+                    <label for="username">Login</label>
+                    <input id="username" type="text" name="username" placeholder="Login" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="password">Senha</label>
+                    <input id="password" type="password" name="password" placeholder="Senha" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="confirmPassword">Confirmação de senha</label>
+                    <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Confimação" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="nome">Nome</label>
+                    <input id="nome" type="text" name="nome" placeholder="Nome" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="cpf">Informe o CPF</label>
+                    <input id="cpf" type="text" name="cpf" placeholder="CPF" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email" name="email" placeholder="Email" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="telefone">Celular</label>
+                    <input id="telefone" type="text" name="telefone" placeholder="(xx) xxxx-xxxx" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="nascimento">Data de Nascimento</label>
+                    <input id="nascimento" type="date" name="nascimento" placeholder="" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="pais">Pais</label>
+                    <input id="pais" type="text" name="pais" placeholder="País" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="Estado">Estado</label>
+                    <input id="estado" type="text" name="estado" placeholder="Estado" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="cidade">Cidade</label>
+                    <input id="cidade" type="text" name="cidade" placeholder="Cidade" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="bairro">Bairro</label>
+                    <input id="bairro" type="text" name="bairro" placeholder="Bairro" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="rua">Rua</label>
+                    <input id="rua" type="text" name="rua" placeholder="Rua" required>
+                </div>
+                <div class="input-box">
+                    <label for="numero">Número</label>
+                    <input id="numero" type="text" name="numero" placeholder="N°" required>
+                </div>
+                <div class="input-box">
+                    <label for="cep">CEP</label>
+                    <input id="cep" type="text" name="cep" placeholder="CEP" required>
+                </div>
+
+            </div>
+            <div class="gender-inputs">
+                <div class="gender-title">
+                    <h6>Gênero</h6>
+                </div>
+                <div class="gender-group">
+                    <div class="gender-input">
+                        <input type="radio" id="male" value="M" name="gender">
+                        <label for="male">Masculino</label>
+                    </div>
+
+                    <div class="gender-input">
+                        <input type="radio" id="female" value="F" name="gender">
+                        <label for="female">Feminino</label>
+                    </div>
+
+                    <div class="gender-input">
+                        <input type="radio" id="others" value="UNK" name="gender">
+                        <label for="others">Outro</label>
+                    </div>
+                    <!-- <div class="gender-input">
                             <input type="radio" id="none" name="gender">
                             <label for="none">num sei</label>
                         </div> -->
-                    </div>
                 </div>
-                <div class="continue-button">
-                    <button type="button" class="btn btn-warning bttwo">Continue</button>
-                    <!-- <button><a href="#">Continuar</a></button> -->
-                </div>
-            </form>
-        </div>
+            </div>
+            <div class="continue-button">
+                <button type="submit" class="btn btn-warning bttwo">Continue</button>
+                <!-- <button><a href="#">Continuar</a></button> -->
+            </div>
+        </form>
     </div>
 </body>
 
