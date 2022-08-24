@@ -36,7 +36,7 @@
     align-items: center;
     width: 60%;
     height: 89%;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 /* inicio da sessão 1 */
 .sessao1{
@@ -91,7 +91,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 35%;
+    height: 40%;
     /* background-color: blue; */
 }
 
@@ -103,7 +103,7 @@
     height:90%;
     border-top: 2px solid var(--color-cinza-400);
     border-bottom: 2px solid var(--color-cinza-400);
-    /* background-color: rgb(161, 79, 79); */
+    background-color: rgb(161, 79, 79);
 }
 
 .idLivro p{
@@ -119,8 +119,14 @@
 .imagem{
     display: flex;
     align-items: center;
-    width: 40%;
-    /* background-color: red; */
+    width: 50%;
+    background-color: red;
+}
+.teste{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    overflow-x: auto;
 }
 
 .txt3{
@@ -131,7 +137,9 @@
 }
 
 .imagem img{
-    height: 110px;
+    background-color: red;
+    width: 120px;
+    height: 140px;
 }
 
 .divLivro{
@@ -143,7 +151,7 @@
     text-align: center;
     width: 47%;
     padding: 0 0 1.3rem 0;
-    /* background-color: red; */
+    background-color: red;
 }
 
 .btCompra{
@@ -234,7 +242,6 @@
 .frete input:focus-visible{
     outline: 1px solid var(--color-amarelo-200);
 }
-
 
 .confirm{
     display: flex;
@@ -329,7 +336,7 @@
     /* background-color: rgb(10, 53, 53); */
 }
 
-.valorFinal{
+.valorF{
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -372,6 +379,3 @@
     font-weight: 500;
     margin: 0;
 }
-
-
-

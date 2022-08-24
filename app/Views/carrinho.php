@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
     crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="carrinho/css/style.css">
-    <link rel="stylesheet" href="carrinho/css/carrinho.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/carrinho.css">
 
     <title>Document</title>
 </head>
@@ -36,7 +36,6 @@
                             <div class="txt3">
                                 <p>nome do produto</p>
                                 <h2>caracteristicas do produto</h2>
-                                <!-- <p>caracteristicas do produto</p> -->
                             </div>
                         </div>
                         <div class="divLivro">
@@ -45,13 +44,33 @@
                                 <span>0</span>
                                 <button class="maior">+</button>
                             </div>
-                            <!-- <button><a href="">-</a>0 <a href="">+</a></button> -->
-                            <!-- <a href="">- 0 +</a> -->
                             <p>0 dias</p>
                             <p>$00,00</p>
                         </div>
                     </div>
                 </div>
+
+                <div class="sessao2">
+                    <div class="idLivro">
+                        <div class="imagem">
+                            <img src="./assets/img/kimetsu.webp" alt="">
+                            <div class="txt3">
+                                <p>nome do produto</p>
+                                <h2>caracteristicas do produto</h2>
+                            </div>
+                        </div>
+                        <div class="divLivro">
+                            <div class="btCompra">
+                                <button class="menor">-</button>
+                                <span>0</span>
+                                <button class="maior">+</button>
+                            </div>
+                            <p>0 dias</p>
+                            <p>$00,00</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="sessao3">
                     <div class="frete">
                         <p>calcule frete</p>
@@ -79,7 +98,7 @@
                         </ul>
                     </div>
                     <div class="final">
-                        <div class="valorFinal">
+                        <div class="valorF">
                             <p>valor total</p>
                             <p>$00,00</p>
                         </div>
