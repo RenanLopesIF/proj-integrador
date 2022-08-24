@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 100%;
     height: 600px;
-    background-color: var(--color-cinza-600);
+    background-color: var(--color-cinza-700);
 }
 .cabeca{
     display: flex;
@@ -23,6 +23,8 @@
     justify-content: space-between;
     width: 100%;
     height: 100%;
+    /* min-width: 90%; */
+
 }
 .carrinho{
     display: flex;
@@ -31,7 +33,7 @@
     align-items: center;
     width: 60%;
     height: 80%;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 
 .sessao1{
@@ -45,6 +47,7 @@
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
     color: var(--color-amarelo-400);
+    /* background-color: chocolate; */
     width: 40%;
     margin: 0;
     padding: 0 0 0.2rem 1rem;
@@ -65,13 +68,6 @@
     color: var(--color-amarelo-400);
 }
 
-.txt3   p{
-    margin: 0;
-    padding: 0 0 0.1rem 1rem;
-    color: var(--color-amarelo-400);
-    font-family: 'Open Sans', sans-serif;
-}
-
 .txt2{
     display: flex;
     align-items: flex-end;
@@ -79,36 +75,49 @@
     text-align: center;
     width: 45%;
     font-family: 'Open Sans', sans-serif;
+    /* background-color: red; */
 }
 .sessao2{
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 45%;
+    height: 35%;
+    /* background-color: blue; */
 }
 .idLivro{
     display: flex;
     justify-content: space-between;
     margin-left: 40px;
+    padding: 0 0 1.5rem 0;
     width: 90%;
-    height:80%;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
+    height:90%;
+    border-top: 2px solid var(--color-cinza-400);
+    border-bottom: 2px solid var(--color-cinza-400);
+    background-color: rgb(161, 79, 79);
 }
 
 .idLivro p{
-    padding: 0 0 1rem 1rem;
-    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+.idLivro h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
 }
 
 .imagem{
     display: flex;
     align-items: center;
     width: 40%;
+    /* background-color: red; */
 }
-
+.txt3{
+    margin: 0;
+    padding: 0 0 0.1rem 0.5rem;
+    color: var(--color-amarelo-400);
+    font-family: 'Open Sans', sans-serif;
+}
 .imagem img{
-    width: 90px;
     height: 110px;
 }
 
@@ -121,8 +130,9 @@
     text-align: center;
     width: 47%;
     padding: 0 0 1.3rem 0;
-    background-color: red;
+    /* background-color: red; */
 }
+
 
 .btCompra{
     display: flex;
@@ -130,12 +140,15 @@
     justify-content: center;
     align-items: center;
     width: 25%;
-    height: 15%;
+    height: 25%;
     color: var(--color-amarelo-300);
-    background-color: var(--color-cinza-600);
+    background-color: transparent;
+    /* background-color: var(--color-cinza-600); */
     border: 1px var(--color-amarelo-400) solid;
     border-radius: 10px;
+    margin-left: 0.8rem;
 }
+
 .maior, .menor{
     color: var(--color-amarelo-400);
     background-color: transparent;
@@ -160,44 +173,157 @@
 .sessao3{
     display: flex;
     align-items: flex-end;
+    text-align: center;
     font-family: 'Open Sans', sans-serif;
     color: var(--color-amarelo-300);
     width: 100%;
+    height: 20%;
+    /* background-color: cornflowerblue; */
+}
+.frete input:hover{
+    background-color: var(--color-cinza-400);
+    transition: all 1s;
+}
+.frete input:focus-visible{
+    outline: 1px solid var(--color-amarelo-200);
 }
 .frete{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 20%;
-    padding: 0.5rem 1rem 0 3rem;
-
 }
 .frete p{
-    padding: 0;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 0 1rem 0;
     margin: 0;
 }
-.sessao3 input{
+
+.frete input{
     display: flex;
-    text-align: justify;
+    text-align: center;
     width: 100px;
     height: 30px;
-    border: 1px solid yellow;
+    border: 1px solid var(--color-amarelo-400);
     border-radius: 10px;
     
 }
+
+
+.confirm{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 60px;
+    height: 35px;
+    border: 1px solid var(--color-amarelo-400);
+    color: var(--color-amarelo-400);
+    border-radius: 10px;
+    
+}
+
+.confirm input:hover{
+    background-color: var(--color-cinza-500);
+    transition: all 1s;
+}
+.confirm input:focus-visible{
+    outline: 1px solid var(--color-amarelo-200);
+}
+
 .sessao3 input{
-    background-color: grey;
+   background-color: transparent;
 }
 .sessao3 input::placeholder{
-    color: yellow;
+    color: var(--color-amarelo-400);
 }
 
 .resumo{
     display: flex;
-    padding: 0 1rem 1rem 0;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.3rem 1rem 1rem 0;
     width: 30%;
-    min-width: 30%;
-    height: 80%;
-    background-color:green;
+    height: 75%;
+    /* background-color:green; */
+}
+.containerBorda{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* justify-items: center; */
+    width: 85%;
+    height: 100%;
+    background-color: var(--color-cinza-500);
+    border: 2px solid var(--color-cinza-600);
+    border-radius: 10px;
+}
+.rFinal{
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-amarelo-400);
+    /* background-color: red; */
+}
+.dadosFinal{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 90%;
+    height: 40%;
+    /* background-color: darkmagenta; */
+    border-top: 2px solid var(--color-cinza-300);
+    border-bottom: 2px solid var(--color-cinza-300);
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-amarelo-400);
+   
+}
+.dadosFinal li{
+    list-style: none;
+    text-decoration: none;
+    padding: 0.5rem 0 0.5rem 0;
+}
+.dadosFinal ul{
+    padding: 0;
+}
+.final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* background-color: rgb(10, 53, 53); */
+}
+.valorF{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-amarelo-400);
+}
+.final input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 145px;
+    height: 40px;
+    background-color: transparent;
+    font-size: 18px;
+    border: 1px solid var(--color-amarelo-400);
+    color: var(--color-amarelo-400);
+    border-radius: 10px;
+}
+.final input{
+    background-color: var(--color-cinza-400);
 }

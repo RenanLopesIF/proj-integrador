@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="carrinho/css/style.css">
-    <link rel="stylesheet" href="carrinho/css/carrinho.css">
-    <!-- inserir botoes com o link do boostrap -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/carrinho.css">
+
     <title>Document</title>
 </head>
 
@@ -33,7 +33,8 @@
                             <img src="./assets/img/kimetsu.webp" alt="">
                             <div class="txt3">
                                 <p>nome do produto</p>
-                                <p>caracteristicas do produto</p>
+                                <h2>caracteristicas do produto</h2>
+                                <!-- <p>caracteristicas do produto</p> -->
                             </div>
                         </div>
                         <div class="divLivro">
@@ -54,10 +55,36 @@
                         <p>calcule frete</p>
                         <input type="number" name="" id="" placeholder="000000-000">
                     </div>
-                    <input type="text" placeholder="okay">
+                    <input type="button" value="ok" class="confirm" placeholder="ok">
+                    <!-- <input class="confirm" type="button" placeholder="ok"> -->
                 </div>
             </div>
-            <div class="resumo"></div>
+            <div class="resumo">
+                <div class="containerBorda">
+                    <div class="rFinal">
+                        <p>resumo do pedido</p>
+                    </div>
+                    <div class="dadosFinal">
+                        <ul>
+                            <li>valor do pedido</li>
+                            <li>frete</li>
+                            <li>desconto</li>
+                        </ul>
+                        <ul>
+                            <li>$00,00</li>
+                            <li>$00,00</li>
+                            <li>$00,00</li>
+                        </ul>
+                    </div>
+                    <div class="final">
+                        <div class="valorF">
+                            <p>valor total</p>
+                            <p>$00,00</p>
+                        </div>
+                        <input type="button" value="finalizar" placeholder="finalizar compra">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <footer class="rodape"></footer>
