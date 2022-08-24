@@ -1,3 +1,4 @@
+/* conteiner pai */
 .container{
     display: flex;
     flex-direction: column;
@@ -5,6 +6,7 @@
     height: 600px;
     background-color: var(--color-cinza-700);
 }
+/* header da pagina */
 .cabeca{
     display: flex;
     justify-content: center;
@@ -17,31 +19,35 @@
     font-size: 25px;
     font-weight: 500;
 }
+/* parte principar do conteudo meio da pagina */
 .containerFilha{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    /* min-width: 90%; */
-
+    /* background-color: red; */
 }
+/* alinhamento parte direita */
 .carrinho{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 60%;
-    height: 80%;
-    /* background-color: blueviolet; */
+    height: 89%;
+    background-color: blueviolet;
 }
-
+/* inicio da sessão 1 */
 .sessao1{
     display: flex;
     flex-direction: row;
     width: 100%;
+    /* border-bottom: 2px solid white; */
+    /* background-color: rgb(147, 182, 96); */
     justify-content: space-evenly;
 }
+
 .txt1{
     display: flex;
     flex-direction: column;
@@ -52,17 +58,20 @@
     margin: 0;
     padding: 0 0 0.2rem 1rem;
 }
+
 .txt1 p{
     margin: 0;
-    font-size: 14px;
+    font-size: 15px;
 }
+
 .txt2 p{
     margin: 0;
-    font-size: 14px;
+    font-size: 15px;
     padding: 0 0 0.1rem 1rem;
     color: var(--color-amarelo-400);
     font-family: 'Open Sans', sans-serif;
 }
+
 .txt1, .txt2 h1{
     font-size: 16px;
     color: var(--color-amarelo-400);
@@ -77,6 +86,7 @@
     font-family: 'Open Sans', sans-serif;
     /* background-color: red; */
 }
+/* inicio da sessão 2 */
 .sessao2{
     display: flex;
     flex-direction: row;
@@ -84,22 +94,23 @@
     height: 35%;
     /* background-color: blue; */
 }
+
 .idLivro{
     display: flex;
     justify-content: space-between;
     margin-left: 40px;
-    padding: 0 0 1.5rem 0;
     width: 90%;
     height:90%;
     border-top: 2px solid var(--color-cinza-400);
     border-bottom: 2px solid var(--color-cinza-400);
-    background-color: rgb(161, 79, 79);
+    /* background-color: rgb(161, 79, 79); */
 }
 
 .idLivro p{
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
 }
+
 .idLivro h2{
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
@@ -111,12 +122,14 @@
     width: 40%;
     /* background-color: red; */
 }
+
 .txt3{
     margin: 0;
     padding: 0 0 0.1rem 0.5rem;
     color: var(--color-amarelo-400);
     font-family: 'Open Sans', sans-serif;
 }
+
 .imagem img{
     height: 110px;
 }
@@ -133,7 +146,6 @@
     /* background-color: red; */
 }
 
-
 .btCompra{
     display: flex;
     flex-direction: row;
@@ -143,11 +155,11 @@
     height: 25%;
     color: var(--color-amarelo-300);
     background-color: transparent;
-    /* background-color: var(--color-cinza-600); */
     border: 1px var(--color-amarelo-400) solid;
     border-radius: 10px;
     margin-left: 0.8rem;
 }
+
 
 .maior, .menor{
     color: var(--color-amarelo-400);
@@ -169,7 +181,7 @@
     font-family: 'Open Sans', sans-serif;
     color: var(--color-amarelo-300);
 }
-
+/* inicio sessão 3 */
 .sessao3{
     display: flex;
     align-items: flex-end;
@@ -180,22 +192,35 @@
     height: 20%;
     /* background-color: cornflowerblue; */
 }
+
+.sessao3 input{
+    background-color: transparent;
+ }
+ 
+ .sessao3 input::placeholder{
+    color: var(--color-amarelo-400);
+ }
+
 .frete input:hover{
     background-color: var(--color-cinza-400);
     transition: all 1s;
 }
+
 .frete input:focus-visible{
     outline: 1px solid var(--color-amarelo-200);
 }
+
 .frete{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 20%;
+    height: 100%;
 }
+
 .frete p{
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Open Sans', sans-serif;
     padding: 0 0 1rem 0;
     margin: 0;
@@ -205,10 +230,10 @@
     display: flex;
     text-align: center;
     width: 100px;
-    height: 30px;
+    height: 35px;
     border: 1px solid var(--color-amarelo-400);
     border-radius: 10px;
-    
+    /* background-color: red; */
 }
 
 
@@ -222,6 +247,8 @@
     border: 1px solid var(--color-amarelo-400);
     color: var(--color-amarelo-400);
     border-radius: 10px;
+    /* background-color: red; */
+    margin-bottom: 0.4rem;
     
 }
 
@@ -229,32 +256,27 @@
     background-color: var(--color-cinza-500);
     transition: all 1s;
 }
+
 .confirm input:focus-visible{
     outline: 1px solid var(--color-amarelo-200);
 }
 
-.sessao3 input{
-   background-color: transparent;
-}
-.sessao3 input::placeholder{
-    color: var(--color-amarelo-400);
-}
-
+/* parte da esquerda container do resumodo pedido */
 .resumo{
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 2.3rem 1rem 1rem 0;
-    width: 30%;
+    width: 25%;
     height: 75%;
     /* background-color:green; */
 }
+
 .containerBorda{
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    /* justify-items: center; */
     width: 85%;
     height: 100%;
     background-color: var(--color-cinza-500);
@@ -272,6 +294,7 @@
     color: var(--color-amarelo-400);
     /* background-color: red; */
 }
+
 .dadosFinal{
     display: flex;
     align-items: center;
@@ -287,14 +310,17 @@
     color: var(--color-amarelo-400);
    
 }
+
 .dadosFinal li{
     list-style: none;
     text-decoration: none;
     padding: 0.5rem 0 0.5rem 0;
 }
+
 .dadosFinal ul{
     padding: 0;
 }
+
 .final{
     display: flex;
     flex-direction: column;
@@ -303,7 +329,8 @@
     width: 100%;
     /* background-color: rgb(10, 53, 53); */
 }
-.valorF{
+
+.valorFinal{
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -312,6 +339,7 @@
     font-family: 'Open Sans', sans-serif;
     color: var(--color-amarelo-400);
 }
+
 .final input{
     display: flex;
     justify-content: center;
@@ -324,6 +352,27 @@
     color: var(--color-amarelo-400);
     border-radius: 10px;
 }
+
 .final input{
     background-color: var(--color-cinza-400);
 }
+/* footer */
+.rodape{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 70px;
+    background-color: var(--color-cinza-900);
+}
+.rodape h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    color: var(--color-amarelo-400);
+    font-weight: 500;
+    margin: 0;
+}
+
+
+
