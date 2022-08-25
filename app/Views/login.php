@@ -29,12 +29,8 @@
                 </div>
                 <div class="input-group">
                     <div class="input-box">
-                        <label for="firstname">Nome</label>
-                        <input id="firstname" type="text" name="firstname" placeholder="Nome" required>
-                    </div>
-                    <div class="input-box">
-                        <label for="email">E-mail</label>
-                        <input id="email" type="email" name="email" placeholder="Email" required>
+                        <label for="user_name">E-mail</label>
+                        <input id="user_name" type="user_name" name="user_name" placeholder="user_name" required>
                     </div>
                     <div class="input-box">
                         <label for="password">Senha</label>
