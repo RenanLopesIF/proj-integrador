@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="sessao2">
-                    <div class="idLivro">
+                    <div class="infoLivro">
                         <div class="imagem">
                             <img src="./assets/img/kimetsu.webp" alt="">
                             <div class="txt3">
@@ -38,7 +38,7 @@
                                 <h2>caracteristicas do produto</h2>
                             </div>
                         </div>
-                        <div class="divLivro">
+                        <div class="unidadeLivro">
                             <div class="btCompra">
                                 <button class="menor">-</button>
                                 <span>0</span>
@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="sessao2">
-                    <div class="idLivro">
+                    <div class="infoLivro">
                         <div class="imagem">
                             <img src="./assets/img/kimetsu.webp" alt="">
                             <div class="txt3">
@@ -59,7 +59,7 @@
                                 <h2>caracteristicas do produto</h2>
                             </div>
                         </div>
-                        <div class="divLivro">
+                        <div class="unidadeLivro">
                             <div class="btCompra">
                                 <button class="menor">-</button>
                                 <span>0</span>
@@ -77,7 +77,6 @@
                         <input type="number" name="" id="" placeholder="000000-000">
                     </div>
                     <input type="button" value="ok" class="confirm" placeholder="ok">
-                    <!-- <input class="confirm" type="button" placeholder="ok"> -->
                 </div>
             </div>
             <div class="resumo">
