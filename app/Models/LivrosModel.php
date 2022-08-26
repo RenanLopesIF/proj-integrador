@@ -36,4 +36,11 @@ class LivrosModel extends Model
     protected $validationRules    = [];
     protected $validationMessages = [];
     protected $skipValidation     = false;
+
+    public function getAll()
+    {
+        $db = \Config\Database::connect();
+        $sql = "SELECT * FROM livros ORDER BY created_at";
+        return $db->query($sql)->getResultArray();
+    }
 }
