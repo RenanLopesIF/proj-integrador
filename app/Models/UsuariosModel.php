@@ -51,7 +51,8 @@ class UsuariosModel extends Model
                 "cpf" => $dados["cpf"],
                 "email" => $dados["email"],
                 "telefone" => $dados["telefone"],
-                "data_nascimento" => $dados["nascimento"]
+                "data_nascimento" => $dados["nascimento"],
+                "sexo" => $dados["gender"]
             ];
             $idUsuario = $this->insert($usuarioDados);
 
