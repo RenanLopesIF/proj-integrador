@@ -9,12 +9,12 @@ class CredenciaisModel extends Model
     protected $table      = 'credenciais';
     protected $primaryKey = 'username';
 
-    protected $useAutoIncrement = true;
+    protected $useAutoIncrement = false;
 
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['senha', 'id_usuario'];
+    protected $allowedFields = ['username', 'senha', 'id_usuario'];
 
     protected $useTimestamps = false;
     protected $updatedField  = 'updated_at';

@@ -56,21 +56,33 @@ class UsuariosModel extends Model
             $idUsuario = $this->insert($usuarioDados);
 
             $credenciaisDados = [
-                "username" => $dados["username"],
                 "id_usuario" => $idUsuario,
+                "username" => $dados["username"],
                 "senha" => $dados["password"]
             ];
             $credenciaisModel->insert($credenciaisDados);
 
             if ($db->transStatus() === false) {
                 $db->transRollback();
-                return true;
+                return false;
             } else {
                 $db->transCommit();
-                return false;
+                return true;
             }
         } catch (\Throwable $th) {
             return false;
         }
+    }
+
+    public function getUser($username, $senha)
+    {
+        $db = \Config\Database::connect();
+        $query = "SELECT * FROM USUARIOS 
+        WHERE id = (SELECT id_usuario FROM CREDENCIAIS WHERE username = :username: AND senha = :senha: )";
+
+        return $db->query($query,  [
+            "username" => $username,
+            "senha" => $senha,
+        ])->getResultArray();
     }
 }
