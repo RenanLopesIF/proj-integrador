@@ -29,6 +29,7 @@ class UsuariosModel extends Model
         $db = \Config\Database::connect();
         $enderecoModel = new \App\Models\EnderecosModel();
         $credenciaisModel = new \App\Models\CredenciaisModel();
+        $carrinhosModel = new \App\Models\CarrinhosModel();
 
         try {
             $db->transBegin();
@@ -62,6 +63,7 @@ class UsuariosModel extends Model
                 "senha" => $dados["password"]
             ];
             $credenciaisModel->insert($credenciaisDados);
+            $carrinhosModel->insert(["id_usuario" => $idUsuario]);
 
             if ($db->transStatus() === false) {
                 $db->transRollback();
