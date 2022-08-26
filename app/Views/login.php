@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -24,13 +24,12 @@
                     </div>
                     <div class="login-button">
                         <button type="button" class="btn btn-warning bttwo">Criar conta</button>
-                        <!-- <button><a href="#">Entrar</a></button> -->
                     </div>
                 </div>
                 <div class="input-group">
                     <div class="input-box">
-                        <label for="user_name">E-mail</label>
-                        <input id="user_name" type="user_name" name="user_name" placeholder="user_name" required>
+                        <label for="username">E-mail</label>
+                        <input id="username" type="username" name="username" placeholder="E-mail" required>
                     </div>
                     <div class="input-box">
                         <label for="password">Senha</label>
@@ -41,7 +40,6 @@
                 <div class="continue-button">
                     <button type="button" class="btn btn-warning bttwo">Continue</button>
                     <p><a href="#">Esqueceu a senha?</a></p>
-                    <!-- <button><a href="#">Continuar</a></button> -->
                 </div>
             </form>
         </div>
