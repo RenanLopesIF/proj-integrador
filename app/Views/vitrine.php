@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
@@ -41,19 +42,19 @@
             <h1>Seja bem vindo</h1>
             <h2>Seus livos preferidos aqui.</h2>
             <p>Aqui tem para todos os estilos.</p>
-            <!-- <p>Caso queira doar livros</p> -->
-            <!-- <a href="" class="btn">Explore Here  <i class="fa fa-arrow-right" aria-hidden="true"></i> </a> -->
+
         </div>
     </div>
     <div>
 
 
-        <div class="section-2">
+    <div class="section-2">
             <h2>Estante principal</h2>
             <div class="gallery">
                 <div class="image-holder">
                     <a href="#">
-                        <img src="vitrine/img/img_escola.jpg" alt="img-1">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51QOd2372JL._SY344_BO1,204,203,200_QL70_ML2_.jpg"
+                            alt="img-1">
                     </a>
                     <div class="text">
                         <h2>Patrimônio turístico internacional</h2>
@@ -96,57 +97,34 @@
                 </div>
                 <div class="image-holder">
                     <a href="#">
-                        <img src="vitrine/img/kimetsu.webp" alt="img-1">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51YVBaZ5fiL._SY344_BO1,204,203,200_QL70_ML2_.jpg"
+                            alt="img-1">
                     </a>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="vitrine/img/kimetsu.webp" alt="img-1">
-                    </a>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="vitrine/img/kimetsu.webp" alt="img-1">
-                    </a>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="vitrine/img/kimetsu.webp" alt="img-1">
-                    </a>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="vitrine/img/kimetsu.webp" alt="img-1">
-                    </a>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="vitrine/img/kimetsu.webp" alt="img-1">
-                    </a>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="vitrine/img/kimetsu.webp" alt="img-1">
-                    </a>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="vitrine/img/kimetsu.webp" alt="img-1">
-                    </a>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="vitrine/img/kimetsu.webp" alt="img-1">
-                    </a>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="vitrine/img/kimetsu.webp" alt="img-1">
-                    </a>
+                    <div class="text">
+                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 7</h2>
+                        <p>R$ 26,69</p>
+                        <p>Koyoharu Gotouge</p>
+                    </div>
                 </div>
             </div>
 
+    </div>
+
+    <div class="section-3">
+        <h2>Loja virtual</h2>
+        <div class="info">
+            <h2>Desenvolvedores</h2>
+            <ul id="social-links">
+                <li><a href="#">Amaury Jr</a></li>
+                <li><a href="#">Renan</a></li>
+                <li><a href="#">Luan</a></li>
+                <li><a href="#">Robsom</a></li>
+            </ul>
         </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
