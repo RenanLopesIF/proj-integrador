@@ -26,7 +26,8 @@ class LivrosModel extends Model
         'url_capa',
         'tipo_de_capa',
         'conservacao',
-        'genero'
+        'genero',
+        'cod_lote'
     ];
 
     protected $useTimestamps = false;
@@ -42,5 +43,9 @@ class LivrosModel extends Model
         $db = \Config\Database::connect();
         $sql = "SELECT * FROM livros ORDER BY created_at";
         return $db->query($sql)->getResultArray();
+    }
+
+    public function insertOne()
+    {
     }
 }

@@ -7,14 +7,14 @@ use CodeIgniter\Model;
 class EstoqueLivrosModel extends Model
 {
     protected $table      = 'estoque_dos_livros';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'cod';
 
-    protected $useAutoIncrement = true;
+    protected $useAutoIncrement = false;
 
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['id_livro', 'id_endereco', 'preco', 'qtd'];
+    protected $allowedFields = ['id_endereco', 'preco', 'qtd'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';
