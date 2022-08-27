@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="formulario_cadastro/css/formulario_cadastro.css">
-    <link rel="stylesheet" href="formulario_cadastro/css/style.css">
-    <title>formulario cadastro</title>
+    <link rel="stylesheet" href="<?= base_url("formulario_cadastro/css/formulario_cadastro.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("formulario_cadastro/css/style.css") ?>">
+    <title>Cadastro usuário</title>
 </head>
 
 <body>
@@ -23,7 +23,6 @@
                 </div>
                 <div class="login-button">
                     <button type="button" class="btn btn-warning bttwo">Entrar</button>
-                    <!-- <button><a href="#">Entrar</a></button> -->
                 </div>
             </div>
             <div class="input-group">
@@ -121,15 +120,10 @@
                         <input type="radio" id="others" value="UNK" name="gender">
                         <label for="others">Outro</label>
                     </div>
-                    <!-- <div class="gender-input">
-                            <input type="radio" id="none" name="gender">
-                            <label for="none">num sei</label>
-                        </div> -->
                 </div>
             </div>
             <div class="continue-button">
                 <button type="submit" class="btn btn-warning bttwo">Continue</button>
-                <!-- <button><a href="#">Continuar</a></button> -->
             </div>
         </form>
     </div>
