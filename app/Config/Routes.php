@@ -38,6 +38,12 @@ $routes->set404Override();
 $routes->get('/', 'Login::index');
 $routes->get('/cadastrar', 'CadastroUsuario::index');
 
+$routes->post('/autenticar', 'AuthController::login');
+$routes->post('/cadastrar/inserir', 'CadastroUsuario::inserir');
+
+$routes->get('/cadastrar/feedback/erro', 'Feedback::cadastrarUsuarioErro');
+$routes->get('/cadastrar/feedback/sucesso', 'Feedback::cadastrarUsuarioSucesso');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
