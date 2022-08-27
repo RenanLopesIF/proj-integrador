@@ -48,13 +48,12 @@
     <div>
 
 
-    <div class="section-2">
+        <div class="section-2">
             <h2>Estante principal</h2>
             <div class="gallery">
                 <div class="image-holder">
                     <a href="#">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/51QOd2372JL._SY344_BO1,204,203,200_QL70_ML2_.jpg"
-                            alt="img-1">
+                        <img src="vitrine/img/kt.jpg" alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     </a>
                     <div class="text">
                         <h2>Patrimônio turístico internacional</h2>
@@ -65,7 +64,7 @@
                 <div class="image-holder">
                     <a href="#">
                         <img src="https://images-na.ssl-images-amazon.com/images/I/51i2he+4FDS._SX337_BO1,204,203,200_.jpg"
-                            alt="img-1">
+                            alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     </a>
                     <div class="text">
                         <h2>Demon Slayer - Kimetsu No Yaiba Vol. 18</h2>
@@ -76,7 +75,7 @@
                 <div class="image-holder">
                     <a href="#">
                         <img src="https://images-na.ssl-images-amazon.com/images/I/51dFErxA-hL._SX342_BO1,204,203,200_.jpg"
-                            alt="img-1">
+                            alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     </a>
                     <div class="text">
                         <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
@@ -87,7 +86,7 @@
                 <div class="image-holder">
                     <a href="#">
                         <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg"
-                            alt="img-1">
+                            alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     </a>
                     <div class="text">
                         <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
@@ -98,7 +97,7 @@
                 <div class="image-holder">
                     <a href="#">
                         <img src="https://images-na.ssl-images-amazon.com/images/I/51YVBaZ5fiL._SY344_BO1,204,203,200_QL70_ML2_.jpg"
-                            alt="img-1">
+                            alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     </a>
                     <div class="text">
                         <h2>Demon Slayer - Kimetsu No Yaiba Vol. 7</h2>
@@ -106,25 +105,141 @@
                         <p>Koyoharu Gotouge</p>
                     </div>
                 </div>
+                <div class="image-holder">
+                    <a href="#">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg"
+                            alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    </a>
+                    <div class="text">
+                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
+                        <p>R$ 22,90</p>
+                        <p>Koyoharu Gotouge</p>
+                    </div>
+                </div>
+                <div class="image-holder">
+                    <a href="#">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg"
+                            alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    </a>
+                    <div class="text">
+                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
+                        <p>R$ 22,90</p>
+                        <p>Koyoharu Gotouge</p>
+                    </div>
+                </div>
+                <div class="image-holder">
+                    <a href="#">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg"
+                            alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    </a>
+                    <div class="text">
+                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
+                        <p>R$ 22,90</p>
+                        <p>Koyoharu Gotouge</p>
+                    </div>
+                </div>
+                <div class="image-holder">
+                    <a href="#">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg"
+                            alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    </a>
+                    <div class="text">
+                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
+                        <p>R$ 22,90</p>
+                        <p>Koyoharu Gotouge</p>
+                    </div>
+                </div>
+                <div class="image-holder">
+                    <a href="#">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg"
+                            alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    </a>
+                    <div class="text">
+                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
+                        <p>R$ 22,90</p>
+                        <p>Koyoharu Gotouge</p>
+                    </div>
+                </div>
+                <div class="image-holder">
+                    <a href="#">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg"
+                            alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    </a>
+                    <div class="text">
+                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
+                        <p>R$ 22,90</p>
+                        <p>Koyoharu Gotouge</p>
+                    </div>
+                </div>
+                <div class="image-holder">
+                    <a href="#">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg"
+                            alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    </a>
+                    <div class="text">
+                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
+                        <p>R$ 22,90</p>
+                        <p>Koyoharu Gotouge</p>
+                    </div>
+                </div>
+                <div class="image-holder">
+                    <a href="#">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg"
+                            alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    </a>
+                    <div class="text">
+                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
+                        <p>R$ 22,90</p>
+                        <p>Koyoharu Gotouge</p>
+                    </div>
+                </div>
+                <div class="image-holder">
+                    <a href="#">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg"
+                            alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    </a>
+                    <div class="text">
+                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
+                        <p>R$ 22,90</p>
+                        <p>Koyoharu Gotouge</p>
+                    </div>
+                </div>
             </div>
 
-    </div>
-
-    <div class="section-3">
-        <h2>Loja virtual</h2>
-        <div class="info">
-            <h2>Desenvolvedores</h2>
-            <ul id="social-links">
-                <li><a href="#">Amaury Jr</a></li>
-                <li><a href="#">Renan</a></li>
-                <li><a href="#">Luan</a></li>
-                <li><a href="#">Robsom</a></li>
-            </ul>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
-    </script>
+
+        div.sc
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Item para ser comprado</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-secondary">
+                        <div class="gallery">
+                            <div class="image-holder">
+                                <img src="vitrine/img/kt.jpg" alt="img-1">
+                                <div class="text">
+                                    <h2>Patrimônio turístico internacional</h2>
+                                    <p>R$ 40,00</p>
+                                    <p>Pablo Escobar</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>

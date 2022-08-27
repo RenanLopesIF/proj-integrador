@@ -204,4 +204,5 @@ div.desc {
 .gallery img {
   height: 250px;
   width: 200px;
+  cursor: pointer;
 }
