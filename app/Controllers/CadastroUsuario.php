@@ -14,7 +14,7 @@ class CadastroUsuario extends BaseController
         $usuariosModel = new \App\Models\UsuariosModel();
         $res = $usuariosModel->insertOne($_POST);
 
-        if ($res) return "Sucesso";
-        else return "Deu erro";
+        if ($res) redirect()->route('cadastrar/feedback/sucesso');
+        else return redirect("cadastrar/feedback/erro");
     }
 }
