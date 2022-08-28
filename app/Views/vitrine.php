@@ -48,142 +48,9 @@
 
         <div class="section-2">
             <h2>Estante principal</h2>
-            <div class="gallery">
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/51i2he+4FDS._SX337_BO1,204,203,200_.jpg" alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    </a>
-                    <div class="text">
-                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 18</h2>
-                        <p>R$ 20,00</p>
-                        <p>Koyoharu Gotouge</p>
-                    </div>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/51dFErxA-hL._SX342_BO1,204,203,200_.jpg" alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    </a>
-                    <div class="text">
-                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
-                        <p>R$ 24,40</p>
-                        <p>Koyoharu Gotouge</p>
-                    </div>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg" alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    </a>
-                    <div class="text">
-                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
-                        <p>R$ 22,90</p>
-                        <p>Koyoharu Gotouge</p>
-                    </div>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/51YVBaZ5fiL._SY344_BO1,204,203,200_QL70_ML2_.jpg" alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    </a>
-                    <div class="text">
-                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 7</h2>
-                        <p>R$ 26,69</p>
-                        <p>Koyoharu Gotouge</p>
-                    </div>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg" alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    </a>
-                    <div class="text">
-                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
-                        <p>R$ 22,90</p>
-                        <p>Koyoharu Gotouge</p>
-                    </div>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg" alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    </a>
-                    <div class="text">
-                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
-                        <p>R$ 22,90</p>
-                        <p>Koyoharu Gotouge</p>
-                    </div>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg" alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    </a>
-                    <div class="text">
-                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
-                        <p>R$ 22,90</p>
-                        <p>Koyoharu Gotouge</p>
-                    </div>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg" alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    </a>
-                    <div class="text">
-                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
-                        <p>R$ 22,90</p>
-                        <p>Koyoharu Gotouge</p>
-                    </div>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg" alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    </a>
-                    <div class="text">
-                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
-                        <p>R$ 22,90</p>
-                        <p>Koyoharu Gotouge</p>
-                    </div>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg" alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    </a>
-                    <div class="text">
-                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
-                        <p>R$ 22,90</p>
-                        <p>Koyoharu Gotouge</p>
-                    </div>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg" alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    </a>
-                    <div class="text">
-                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
-                        <p>R$ 22,90</p>
-                        <p>Koyoharu Gotouge</p>
-                    </div>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg" alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    </a>
-                    <div class="text">
-                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
-                        <p>R$ 22,90</p>
-                        <p>Koyoharu Gotouge</p>
-                    </div>
-                </div>
-                <div class="image-holder">
-                    <a href="#">
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/51os7jlROQL._SX339_BO1,204,203,200_.jpg" alt="img-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    </a>
-                    <div class="text">
-                        <h2>Demon Slayer - Kimetsu No Yaiba Vol. 13</h2>
-                        <p>R$ 22,90</p>
-                        <p>Koyoharu Gotouge</p>
-                    </div>
-                </div>
-            </div>
+            <div id="gallery" class="gallery"></div>
 
         </div>
-
-        div.sc
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -195,11 +62,11 @@
                     <div class="modal-body bg-secondary">
                         <div class="gallery">
                             <div class="image-holder">
-                                <img src="vitrine/img/kt.jpg" alt="img-1">
+                                <img id="modal-imagem-livro" alt="Capa do livro">
                                 <div class="text">
-                                    <h2>Patrimônio turístico internacional</h2>
-                                    <p>R$ 40,00</p>
-                                    <p>Pablo Escobar</p>
+                                    <h2 id="modal-titulo-livro">Patrimônio turístico internacional</h2>
+                                    <p id="modal-preco-livro">R$ 40,00</p>
+                                    <p id="modal-autor-livro">Pablo Escobar</p>
                                 </div>
                             </div>
                         </div>
@@ -214,6 +81,7 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
         </script>
+        <script src="<?= base_url("vitrine/js/index.js") ?>"></script>
 </body>
 
 </html>

@@ -41,7 +41,7 @@ class LivrosModel extends Model
     public function getAll()
     {
         $db = \Config\Database::connect();
-        $sql = "SELECT * FROM livros ORDER BY created_at";
+        $sql = "SELECT * FROM livros l inner join estoque_livros el on l.cod_lote=el.cod ORDER BY l.created_at DESC";
         return $db->query($sql)->getResultArray();
     }
 
