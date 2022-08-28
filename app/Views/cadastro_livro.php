@@ -14,10 +14,10 @@
 <body>
     <div class="container">
 
-        <form id="form" action="#" method="POST">
+        <form id="form" action="<?= base_url("/cadastrar/livro/inserir") ?>" method="POST">
             <div class="form-header">
                 <div class="title">
-                    <h1>Cadastrar Livro</h1>
+                    <h1>Cadastrar livro</h1>
                 </div>
             </div>
             <div class="input-group">
@@ -53,6 +53,11 @@
                 </div>
 
                 <div class="input-box">
+                    <label for="genero">Gênero</label>
+                    <input id="genero" type="genero" name="genero" placeholder="Gênero" required>
+                </div>
+
+                <div class="input-box">
                     <label for="paginas">N° de páginas</label>
                     <input id="paginas" type="number" name="paginas" placeholder="N° de páginas" required>
                 </div>
@@ -68,18 +73,13 @@
                 </div>
 
                 <div class="input-box">
-                    <label for="conversavacao">Estado de conversavação</label>
-                    <input id="conversavacao" type="text" name="conversavacao" placeholder="Estado de conversavação" required>
+                    <label for="conservacao">Estado de conversavação</label>
+                    <input id="conservacao" type="text" name="conservacao" placeholder="Estado de conversavação" required>
                 </div>
 
                 <div class="input-box">
                     <label for="lote">Código do lote</label>
-                    <input id="lote" type="text" name="lote" placeholder="Código do lote" required>
-                </div>
-
-                <div class="input-box">
-                    <label for="preco">Preço</label>
-                    <input id="preco" type="number" name="preco" placeholder="Preço" required>
+                    <input id="lote" type="text" name="lote" placeholder="lote" required>
                 </div>
 
                 <div class="input-box">
@@ -88,36 +88,8 @@
                 </div>
 
                 <div class="input-box">
-                    <label for="pais">Pais</label>
-                    <input id="pais" type="text" name="pais" placeholder="País" required>
-                </div>
-
-                <div class="input-box">
-                    <label for="Estado">Estado</label>
-                    <input id="estado" type="text" name="estado" placeholder="Estado" required>
-                </div>
-
-                <div class="input-box">
-                    <label for="cidade">Cidade</label>
-                    <input id="cidade" type="text" name="cidade" placeholder="Cidade" required>
-                </div>
-
-                <div class="input-box">
-                    <label for="bairro">Bairro</label>
-                    <input id="bairro" type="text" name="bairro" placeholder="Bairro" required>
-                </div>
-
-                <div class="input-box">
-                    <label for="rua">Rua</label>
-                    <input id="rua" type="text" name="rua" placeholder="Rua" required>
-                </div>
-                <div class="input-box">
-                    <label for="numero">Número</label>
-                    <input id="numero" type="text" name="numero" placeholder="N°" required>
-                </div>
-                <div class="input-box">
-                    <label for="cep">CEP</label>
-                    <input id="cep" type="text" name="cep" placeholder="CEP" required>
+                    <label for="sinopse">Sinopse</label>
+                    <textarea name="sinopse" id="sinopse" cols="70" rows="5"></textarea>
                 </div>
 
             </div>

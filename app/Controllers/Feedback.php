@@ -9,8 +9,8 @@ class Feedback extends BaseController
         return view('feedback', [
             "status" => "sucesso",
             "message" => "Usuário criado com sucesso",
-            "btnLink" => base_url("/"),
-            "btnMessage" => "Voltar para tela de login"
+            "btnLink" => "javascript:history.back()",
+            "btnMessage" => "Voltar"
         ]);
     }
 
@@ -19,8 +19,48 @@ class Feedback extends BaseController
         return view('feedback', [
             "status" => "erro",
             "message" => "Houver uma falha ao tentar cadastrar o usuário",
-            "btnLink" => base_url("/cadastrar"),
-            "btnMessage" => "Voltar para tela de cadastro"
+            "btnLink" => "javascript:history.back()",
+            "btnMessage" => "Voltar"
+        ]);
+    }
+
+    public function cadastrarLivroSucesso()
+    {
+        return view('feedback', [
+            "status" => "sucesso",
+            "message" => "Livro criado com sucesso",
+            "btnLink" => "javascript:history.back()",
+            "btnMessage" => "Voltar"
+        ]);
+    }
+
+    public function cadastrarLivroErro()
+    {
+        return view('feedback', [
+            "status" => "erro",
+            "message" => "Houver uma falha ao tentar cadastrar o livro",
+            "btnLink" => "javascript:history.back()",
+            "btnMessage" => "Voltar"
+        ]);
+    }
+
+    public function cadastrarLoteSucesso()
+    {
+        return view('feedback', [
+            "status" => "sucesso",
+            "message" => "Lote criado com sucesso",
+            "btnLink" => "javascript:history.back()",
+            "btnMessage" => "Voltar"
+        ]);
+    }
+
+    public function cadastrarLoteErro()
+    {
+        return view('feedback', [
+            "status" => "erro",
+            "message" => "Houver uma falha ao tentar cadastrar o lote",
+            "btnLink" => "javascript:history.back()",
+            "btnMessage" => "Voltar"
         ]);
     }
 }

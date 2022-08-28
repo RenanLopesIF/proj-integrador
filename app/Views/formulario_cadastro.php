@@ -16,7 +16,7 @@
         <div class="form-image">
             <img src="assets/img/moça_dog.svg" alt="">
         </div>
-        <form id="form" action="<?= base_url("/cadastrar/inserir") ?>" method="POST">
+        <form id="form" action="<?= base_url("/cadastrar/usuario/inserir") ?>" method="POST">
             <div class="form-header">
                 <div class="title">
                     <h1>Cadastre-se</h1>

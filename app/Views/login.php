@@ -26,7 +26,7 @@
 
     <script>
         function cadastrar() {
-            window.location = "<?= base_url('/cadastrar') ?>"
+            window.location = "<?= base_url('/cadastrar/usuario') ?>"
         };
 
         document.querySelector("#login-btn-cadastrar").onclick = cadastrar;

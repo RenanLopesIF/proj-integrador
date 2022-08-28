@@ -45,7 +45,41 @@ class LivrosModel extends Model
         return $db->query($sql)->getResultArray();
     }
 
-    public function insertOne()
+    public function insertOne($dados)
     {
+        $db = \Config\Database::connect();
+
+        $dadosLivro = [
+            "titulo" => $dados["titulo"],
+            "autor" => $dados["autor"],
+            "editora" => $dados["editora"],
+            "edicao" => $dados["edicao"],
+            "ano_publicacao" => $dados["ano_publicacao"],
+            "idioma" => $dados["idioma"],
+            "total_paginas" => $dados["paginas"],
+            "sinopse" => $dados["sinopse"],
+            "url_capa" => $dados["url_capa"],
+            "tipo_de_capa" => $dados["tipo_capa"],
+            "conservacao" => $dados["conservacao"],
+            "genero" => $dados["genero"],
+            "cod_lote" => $dados["lote"],
+        ];
+        try {
+            $db->transBegin();
+            $db->query("UPDATE estoque_livros el SET qtd = (el.qtd + :qtd:) WHERE cod = :cod:", [
+                "qtd" => $dados["qtd"],
+                "cod" => $dados["lote"]
+            ]);
+            $this->insert($dadosLivro);
+            if ($db->transStatus() === false) {
+                $db->transRollback();
+                return false;
+            } else {
+                $db->transCommit();
+                return true;
+            }
+        } catch (\Throwable $th) {
+            return false;
+        }
     }
 }
