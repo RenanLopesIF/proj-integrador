@@ -9,5 +9,6 @@ class Login extends BaseController
         $session = session();
 
         return view('login');
+        // return view('vitrine'); // depois tirar, coloquei para testar
     }
 }
