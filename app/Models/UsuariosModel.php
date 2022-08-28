@@ -29,6 +29,7 @@ class UsuariosModel extends Model
         $db = \Config\Database::connect();
         $enderecoModel = new \App\Models\EnderecosModel();
         $credenciaisModel = new \App\Models\CredenciaisModel();
+        $carrinhosModel = new \App\Models\CarrinhosModel();
 
         try {
             $db->transBegin();
@@ -51,26 +52,40 @@ class UsuariosModel extends Model
                 "cpf" => $dados["cpf"],
                 "email" => $dados["email"],
                 "telefone" => $dados["telefone"],
-                "data_nascimento" => $dados["nascimento"]
+                "data_nascimento" => $dados["nascimento"],
+                "sexo" => $dados["gender"]
             ];
             $idUsuario = $this->insert($usuarioDados);
 
             $credenciaisDados = [
-                "username" => $dados["username"],
                 "id_usuario" => $idUsuario,
+                "username" => $dados["username"],
                 "senha" => $dados["password"]
             ];
             $credenciaisModel->insert($credenciaisDados);
+            $carrinhosModel->insert(["id_usuario" => $idUsuario]);
 
             if ($db->transStatus() === false) {
                 $db->transRollback();
-                return true;
+                return false;
             } else {
                 $db->transCommit();
-                return false;
+                return true;
             }
         } catch (\Throwable $th) {
             return false;
         }
+    }
+
+    public function getUser($username, $senha)
+    {
+        $db = \Config\Database::connect();
+        $query = "SELECT * FROM USUARIOS 
+        WHERE id = (SELECT id_usuario FROM CREDENCIAIS WHERE username = :username: AND senha = :senha: )";
+
+        return $db->query($query,  [
+            "username" => $username,
+            "senha" => $senha,
+        ])->getResultArray();
     }
 }

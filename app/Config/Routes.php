@@ -36,8 +36,23 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Login::index');
-$routes->get('/cadastrar', 'CadastroUsuario::index');
-$routes->post('/cadastrar/inserir', 'CadastroUsuario::inserir');
+$routes->get('/cadastrar/usuario', 'CadastroUsuario::index');
+$routes->get('/cadastrar/lote', 'CadastroLote::index');
+$routes->get('/cadastrar/livro', 'CadastroLivro::index');
+
+$routes->post('/autenticar', 'AuthController::login');
+$routes->post('/cadastrar/usuario/inserir', 'CadastroUsuario::inserir');
+$routes->post('/cadastrar/lote/inserir', 'CadastroLote::inserir');
+$routes->post('/cadastrar/livro/inserir', 'CadastroLivro::inserir');
+
+$routes->get('/cadastrar/usuario/feedback/erro', 'Feedback::cadastrarUsuarioErro');
+$routes->get('/cadastrar/usuario/feedback/sucesso', 'Feedback::cadastrarUsuarioSucesso');
+
+$routes->get('/cadastrar/livro/feedback/erro', 'Feedback::cadastrarLivroErro');
+$routes->get('/cadastrar/livro/feedback/sucesso', 'Feedback::cadastrarLivroSucesso');
+
+$routes->get('/cadastrar/lote/feedback/erro', 'Feedback::cadastrarLoteErro');
+$routes->get('/cadastrar/lote/feedback/sucesso', 'Feedback::cadastrarLoteSucesso');
 
 /*
  * --------------------------------------------------------------------
