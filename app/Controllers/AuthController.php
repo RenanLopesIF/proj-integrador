@@ -4,13 +4,6 @@ namespace App\Controllers;
 
 class AuthController extends BaseController
 {
-    public function index()
-    {
-        $session = session();
-
-        return view('login');
-    }
-
     public function login()
     {
         $session = session();
@@ -20,7 +13,9 @@ class AuthController extends BaseController
             foreach ($res[0] as $key => $value) {
                 $session->set($key, $value);
             }
+
+            return redirect('vitrine');
         }
-        return var_dump($res[0]);
+        return redirect('login');
     }
 }

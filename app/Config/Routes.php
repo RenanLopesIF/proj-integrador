@@ -39,6 +39,7 @@ $routes->get('/', 'Login::index');
 $routes->get('/cadastrar/usuario', 'CadastroUsuario::index');
 $routes->get('/cadastrar/lote', 'CadastroLote::index');
 $routes->get('/cadastrar/livro', 'CadastroLivro::index');
+$routes->get('/vitrine', 'Vitrine::index');
 
 $routes->post('/autenticar', 'AuthController::login');
 $routes->post('/cadastrar/usuario/inserir', 'CadastroUsuario::inserir');
