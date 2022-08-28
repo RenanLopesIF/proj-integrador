@@ -64,9 +64,9 @@
                             <div class="image-holder">
                                 <img id="modal-imagem-livro" alt="Capa do livro">
                                 <div class="text">
-                                    <h2 id="modal-titulo-livro">Patrimônio turístico internacional</h2>
-                                    <p id="modal-preco-livro">R$ 40,00</p>
-                                    <p id="modal-autor-livro">Pablo Escobar</p>
+                                    <h2 id="modal-titulo-livro"></h2>
+                                    <p id="modal-preco-livro"></p>
+                                    <p id="modal-autor-livro"></p>
                                 </div>
                             </div>
                         </div>
