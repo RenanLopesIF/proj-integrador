@@ -46,6 +46,7 @@ $routes->post('/autenticar', 'AuthController::login');
 $routes->post('/cadastrar/usuario/inserir', 'CadastroUsuario::inserir');
 $routes->post('/cadastrar/lote/inserir', 'CadastroLote::inserir');
 $routes->post('/cadastrar/livro/inserir', 'CadastroLivro::inserir');
+$routes->post('/carrinho/inserir', 'Carrinho::insertItem');
 
 $routes->get('/cadastrar/usuario/feedback/erro', 'Feedback::cadastrarUsuarioErro');
 $routes->get('/cadastrar/usuario/feedback/sucesso', 'Feedback::cadastrarUsuarioSucesso');

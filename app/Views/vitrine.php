@@ -73,7 +73,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Comprar</button>
+                        <button id="modal-botao-comprar" type="button" class="btn btn-primary">Comprar</button>
                     </div>
                 </div>
             </div>

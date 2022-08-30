@@ -1,11 +1,38 @@
 const baseURL = document.URL.split("/public/")[0] + "/public";
 const urlBookList = baseURL + "/livros";
+const urlInserIntoCart = baseURL + "/carrinho/inserir";
 const galleryElement = document.querySelector("#gallery");
 
 const modalImagemLivro = document.querySelector("#modal-imagem-livro");
 const modalTituloLivro = document.querySelector("#modal-titulo-livro");
 const modalPrecoLivro = document.querySelector("#modal-preco-livro");
 const modalAutorLivro = document.querySelector("#modal-autor-livro");
+const modalBotaoComprar = document.querySelector("#modal-botao-comprar");
+
+async function insertIntoCart(id_livro, qtd) {
+  // const formData = new FormData();
+  // formData.append("id_livro", id_livro);
+  // formData.append("qtd", qtd);
+
+  const formPurchase = document.createElement("form");
+  formPurchase.setAttribute("action", urlInserIntoCart);
+  formPurchase.setAttribute("method", "POST");
+
+  const inputId = document.createElement("input");
+  inputId.setAttribute("id", "id_livro");
+  inputId.setAttribute("name", "id_livro");
+  inputId.value = 10;
+
+  const inputQtd = document.createElement("input");
+  inputQtd.setAttribute("id", "qtd");
+  inputQtd.setAttribute("name", "qtd");
+  inputQtd.value = 1;
+
+  // formPurchase.appendChild(inputQtd);
+  formPurchase.appendChild(inputId);
+  galleryElement.appendChild(formPurchase);
+  formPurchase.submit();
+}
 
 async function init() {
   const livros = await fetch(urlBookList, {
@@ -44,6 +71,9 @@ async function init() {
       modalTituloLivro.innerHTML = livro.titulo;
       modalPrecoLivro.innerHTML = Number(livro.preco).toFixed(2);
       modalAutorLivro.innerHTML = livro.autor;
+      modalBotaoComprar.onclick = () => {
+        insertIntoCart(23, 15);
+      };
     };
   });
 }
