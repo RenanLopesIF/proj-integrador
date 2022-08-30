@@ -10,10 +10,6 @@ const modalAutorLivro = document.querySelector("#modal-autor-livro");
 const modalBotaoComprar = document.querySelector("#modal-botao-comprar");
 
 async function insertIntoCart(id_livro, qtd) {
-  // const formData = new FormData();
-  // formData.append("id_livro", id_livro);
-  // formData.append("qtd", qtd);
-
   const formPurchase = document.createElement("form");
   formPurchase.setAttribute("action", urlInserIntoCart);
   formPurchase.setAttribute("method", "POST");
@@ -21,14 +17,16 @@ async function insertIntoCart(id_livro, qtd) {
   const inputId = document.createElement("input");
   inputId.setAttribute("id", "id_livro");
   inputId.setAttribute("name", "id_livro");
-  inputId.value = 10;
+  inputId.setAttribute("type", "text");
+  inputId.value = id_livro;
 
   const inputQtd = document.createElement("input");
   inputQtd.setAttribute("id", "qtd");
   inputQtd.setAttribute("name", "qtd");
-  inputQtd.value = 1;
+  inputQtd.setAttribute("type", "text");
+  inputQtd.value = qtd;
 
-  // formPurchase.appendChild(inputQtd);
+  formPurchase.appendChild(inputQtd);
   formPurchase.appendChild(inputId);
   galleryElement.appendChild(formPurchase);
   formPurchase.submit();
@@ -72,7 +70,7 @@ async function init() {
       modalPrecoLivro.innerHTML = Number(livro.preco).toFixed(2);
       modalAutorLivro.innerHTML = livro.autor;
       modalBotaoComprar.onclick = () => {
-        insertIntoCart(23, 15);
+        insertIntoCart(livro.id, 1);
       };
     };
   });

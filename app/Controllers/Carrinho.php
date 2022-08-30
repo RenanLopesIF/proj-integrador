@@ -13,10 +13,12 @@ class Carrinho extends BaseController
     public function insertItem()
     {
         $session = session();
-        $carrinhoModel = new \App\Models\CarrinhosModel();
-        // $id = $_POST['id_livro'];
-        // $res = $carrinhoModel->insertItem($session->get("id"), $id, $_POST["qtd"]);
-        // if ($res) return "inserido";
-        return var_dump($_POST);
+        $carrinhoModel = new \App\Models\LivrosCarrinhoModel();
+        $id_usuario = $session->get("id");
+        $id_livro = $_POST['id_livro'];
+        $qtd = $_POST["qtd"];
+        $res = $carrinhoModel->insertItem($id_usuario, $id_livro, $qtd);
+        if ($res) return "inserido";
+        return 'falhou';
     }
 }
