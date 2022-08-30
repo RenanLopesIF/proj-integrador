@@ -8,6 +8,32 @@ const modalTituloLivro = document.querySelector("#modal-titulo-livro");
 const modalPrecoLivro = document.querySelector("#modal-preco-livro");
 const modalAutorLivro = document.querySelector("#modal-autor-livro");
 const modalBotaoComprar = document.querySelector("#modal-botao-comprar");
+const qtdItems = document.querySelector("#qtd-items");
+
+const qtd = {
+  max: 1,
+  min: 1,
+  current: 1,
+};
+
+function changeQtd(ev) {
+  const value = Number(ev.target.value);
+
+  if (value <= qtd.min) {
+    qtdItems.value = qtd.min;
+    qtd.current = qtd.min;
+    return;
+  }
+
+  if (value > qtd.max) {
+    qtdItems.value = qtd.max;
+    qtd.current = qtd.current;
+    return;
+  }
+
+  qtdItems.value = value;
+  qtd.current = value;
+}
 
 async function insertIntoCart(id_livro, qtd) {
   const formPurchase = document.createElement("form");
@@ -38,8 +64,6 @@ async function init() {
     method: "GET",
   }).then((res) => res.json());
 
-  console.log(livros);
-
   livros.forEach((livro) => {
     const cardElement = document.createElement("div");
     cardElement.setAttribute("class", "image-holder");
@@ -65,13 +89,16 @@ async function init() {
     galleryElement.appendChild(cardElement);
 
     cardElement.onclick = () => {
+      qtd.max = livro.qtd;
+      qtdItems.removeEventListener("change", changeQtd);
       modalImagemLivro.setAttribute("src", livro.url_capa);
       modalTituloLivro.innerHTML = livro.titulo;
       modalPrecoLivro.innerHTML = Number(livro.preco).toFixed(2);
       modalAutorLivro.innerHTML = livro.autor;
       modalBotaoComprar.onclick = () => {
-        insertIntoCart(livro.id, 1);
+        insertIntoCart(livro.id, qtd.current);
       };
+      qtdItems.addEventListener("change", changeQtd);
     };
   });
 }
