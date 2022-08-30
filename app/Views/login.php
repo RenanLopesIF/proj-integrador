@@ -5,32 +5,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= base_url('/login/css/style.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('/login/css/formulario.css') ?>">
-    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?= base_url('/style.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('/login/css/novo_login.css') ?>">
+    <title>Document</title>
 </head>
 
 <body>
-    <form method="POST" action="<?= base_url("/autenticar") ?>">
-        <h3>login</h3>
-        <label>Login</label>
-        <input class="email" type="text" name="username" placeholder="Login">
-        <label>Senha</label>
-        <input class="senha" type="password" name="password" placeholder="Senha">
-        <div class="bt">
-            <input type="submit" value="continue" onclick="verificar()">
+    <div class="container">
+        <div class="form-image">
 
-            <input id="login-btn-cadastrar" type="button" value="cadastre-se">
+            <img src="<?= base_url("/login/img/moca_dog.svg") ?>" alt="">
         </div>
-    </form>
+        <div class="form">
+            <form method="POST" action="<?= base_url("/autenticar") ?>">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Conecte-se</h1>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="email">Usuário</label>
+                        <input id="email" type="text" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="password" name="password" placeholder="Senha" required>
+                    </div>
 
-    <script>
-        function cadastrar() {
-            window.location = "<?= base_url('/cadastrar/usuario') ?>"
-        };
-
-        document.querySelector("#login-btn-cadastrar").onclick = cadastrar;
-    </script>
+                </div>
+                <div class="continue-button">
+                    <button type="submit" class="btn btn-warning bttwo">Entrar</button>
+                    <button type="button" class="btn btn-warning bttwo">Criar conta</button>
+                    <p><a href="#">Esqueceu a senha?</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
