@@ -210,10 +210,10 @@
 
             <div class="resumo">
                 <div class="containerBorda">
-                    <div class="rFinal">
+                    <div class="resumoPedido">
                         <p>Resumo do pedido</p>
                     </div>
-                    <div class="dadosFinal">
+                    <div class="valorPedido">
                         <ul>
                             <li>Valor do pedido</li>
                             <li>Frete</li>
@@ -225,8 +225,8 @@
                             <li>$00,00</li>
                         </ul>
                     </div>
-                    <div class="final">
-                        <div class="valorF">
+                    <div class="totalPagar">
+                        <div class="valorFim">
                             <p>Valor total</p>
                             <p>$00,00</p>
                         </div>
@@ -236,7 +236,7 @@
             </div>
         </div>
 
-        <footer class="rodape">
+        <footer class="footer">
             <h1>Rodapé</h1>
         </footer>
     </div>

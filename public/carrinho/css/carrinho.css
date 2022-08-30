@@ -266,7 +266,7 @@
     border: 2px solid var(--color-cinza-600);
     border-radius: 10px;
 }
-.rFinal{
+.resumoPedido{
     display: flex;
     width: 100%;
     height: 24%;
@@ -278,7 +278,7 @@
     color: var(--color-amarelo-400);
 }
 
-.dadosFinal{
+.valorPedido{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -292,17 +292,17 @@
     color: var(--color-amarelo-400);  
 }
 
-.dadosFinal li{
+.valorPedido li{
     list-style: none;
     text-decoration: none;
     padding: 0.5rem 0 0.5rem 0;
 }
 
-.dadosFinal ul{
+.valorPedido ul{
     padding: 0;
 }
 
-.final{
+.totalPagar{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -311,7 +311,7 @@
     height: 35%;
 }
 
-.valorF{
+.valorFim{
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -321,7 +321,7 @@
     color: var(--color-amarelo-400);
 }
 
-.final input{
+.totalPagar input{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -335,11 +335,11 @@
     margin-top: 2rem;
 }
 
-.final input{
+.totalPagar input{
     background-color: var(--color-cinza-400);
 }
 /* footer */
-.rodape{
+.footer{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -348,7 +348,7 @@
     height: 70px;
     background-color: var(--color-cinza-900);
 }
-.rodape h1{
+.footer h1{
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     color: var(--color-amarelo-400);
