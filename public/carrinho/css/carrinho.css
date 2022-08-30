@@ -8,7 +8,7 @@
     background-color: var(--color-cinza-700);
 }
 /* header da pagina */
-.cabeca{
+.header{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,7 +82,7 @@
     font-family: 'Open Sans', sans-serif;
 }
 /* inicio da sessão 2 */
-.sessao2{
+.listaCompra{
     display: flex;
     flex-direction: row;
     width: 100%;

@@ -15,7 +15,7 @@
 
 <body>
     <div class="container">
-        <header class="cabeca">cabeçalho</header>
+        <header class="header">cabeçalho</header>
         <div class="containerFilha">
             <div class="carrinho">
                 <div class="sessao1">
@@ -29,7 +29,7 @@
                         <p>Preço</p>
                     </div>
                 </div>
-                <div class="sessao2">
+                <div class="listaCompra">
                     <div class="infoLivro">
                         <div class="imagem">
                             <img src="./assets/img/kimetsu.webp" alt="">
@@ -50,7 +50,7 @@
                     </div>
                 </div>
 
-                <div class="sessao2">
+                <div class="listaCompra">
                     <div class="infoLivro">
                         <div class="imagem">
                             <img src="./assets/img/kimetsu.webp" alt="">
@@ -71,7 +71,7 @@
                     </div>
                 </div>
 
-                <div class="sessao2">
+                <div class="listaCompra">
                     <div class="infoLivro">
                         <div class="imagem">
                             <img src="./assets/img/kimetsu.webp" alt="">
@@ -92,7 +92,7 @@
                     </div>
                 </div>
 
-                <div class="sessao2">
+                <div class="listaCompra">
                     <div class="infoLivro">
                         <div class="imagem">
                             <img src="./assets/img/kimetsu.webp" alt="">
@@ -113,7 +113,7 @@
                     </div>
                 </div>
 
-                <div class="sessao2">
+                <div class="listaCompra">
                     <div class="infoLivro">
                         <div class="imagem">
                             <img src="./assets/img/kimetsu.webp" alt="">
@@ -134,7 +134,7 @@
                     </div>
                 </div>
 
-                <div class="sessao2">
+                <div class="listaCompra">
                     <div class="infoLivro">
                         <div class="imagem">
                             <img src="./assets/img/kimetsu.webp" alt="">
@@ -155,7 +155,7 @@
                     </div>
                 </div>
 
-                <div class="sessao2">
+                <div class="listaCompra">
                     <div class="infoLivro">
                         <div class="imagem">
                             <img src="./assets/img/kimetsu.webp" alt="">
@@ -176,7 +176,7 @@
                     </div>
                 </div>
 
-                <div class="sessao2">
+                <div class="listaCompra">
                     <div class="infoLivro">
                         <div class="imagem">
                             <img src="./assets/img/kimetsu.webp" alt="">
