@@ -8,7 +8,7 @@
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
     crossorigin="anonymous"> -->
     <link rel="stylesheet" href="<?= base_url('/carrinho/css/style.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('/carrinho/css/style.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('/carrinho/css/carrinho.css') ?>">
 
     <title>Document</title>
 </head>
@@ -18,7 +18,7 @@
         <header class="cabeca">cabeçalho</header>
         <div class="containerFilha">
             <div class="carrinho">
-                <div class="sessao1">
+                <div id="sessao1" class="sessao1">
                     <div class="txt1">
                         <h1>Meu carrinho</h1>
                         <p>Produto</p>
@@ -29,175 +29,7 @@
                         <p>Preço</p>
                     </div>
                 </div>
-                <div class="sessao2">
-                    <div class="infoLivro">
-                        <div class="imagem">
-                            <img src="./assets/img/kimetsu.webp" alt="">
-                            <div class="txt3">
-                                <p>Nome do produto</p>
-                                <h2>Caracteristicas do produto</h2>
-                            </div>
-                        </div>
-                        <div class="unidadeLivro">
-                            <div class="btCompra">
-                                <button class="menor">-</button>
-                                <span>0</span>
-                                <button class="maior">+</button>
-                            </div>
-                            <p>0 dias</p>
-                            <p>$00,00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sessao2">
-                    <div class="infoLivro">
-                        <div class="imagem">
-                            <img src="./assets/img/kimetsu.webp" alt="">
-                            <div class="txt3">
-                                <p>Nome do produto</p>
-                                <h2>Caracteristicas do produto</h2>
-                            </div>
-                        </div>
-                        <div class="unidadeLivro">
-                            <div class="btCompra">
-                                <button class="menor">-</button>
-                                <span>0</span>
-                                <button class="maior">+</button>
-                            </div>
-                            <p>0 dias</p>
-                            <p>$00,00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sessao2">
-                    <div class="infoLivro">
-                        <div class="imagem">
-                            <img src="./assets/img/kimetsu.webp" alt="">
-                            <div class="txt3">
-                                <p>Nome do produto</p>
-                                <h2>Caracteristicas do produto</h2>
-                            </div>
-                        </div>
-                        <div class="unidadeLivro">
-                            <div class="btCompra">
-                                <button class="menor">-</button>
-                                <span>0</span>
-                                <button class="maior">+</button>
-                            </div>
-                            <p>0 dias</p>
-                            <p>$00,00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sessao2">
-                    <div class="infoLivro">
-                        <div class="imagem">
-                            <img src="./assets/img/kimetsu.webp" alt="">
-                            <div class="txt3">
-                                <p>nome do produto</p>
-                                <h2>caracteristicas do produto</h2>
-                            </div>
-                        </div>
-                        <div class="unidadeLivro">
-                            <div class="btCompra">
-                                <button class="menor">-</button>
-                                <span>0</span>
-                                <button class="maior">+</button>
-                            </div>
-                            <p>0 dias</p>
-                            <p>$00,00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sessao2">
-                    <div class="infoLivro">
-                        <div class="imagem">
-                            <img src="./assets/img/kimetsu.webp" alt="">
-                            <div class="txt3">
-                                <p>Nome do produto</p>
-                                <h2>caracteristicas do produto</h2>
-                            </div>
-                        </div>
-                        <div class="unidadeLivro">
-                            <div class="btCompra">
-                                <button class="menor">-</button>
-                                <span>0</span>
-                                <button class="maior">+</button>
-                            </div>
-                            <p>0 dias</p>
-                            <p>$00,00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sessao2">
-                    <div class="infoLivro">
-                        <div class="imagem">
-                            <img src="./assets/img/kimetsu.webp" alt="">
-                            <div class="txt3">
-                                <p>Nome do produto</p>
-                                <h2>caracteristicas do produto</h2>
-                            </div>
-                        </div>
-                        <div class="unidadeLivro">
-                            <div class="btCompra">
-                                <button class="menor">-</button>
-                                <span>0</span>
-                                <button class="maior">+</button>
-                            </div>
-                            <p>0 dias</p>
-                            <p>$00,00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sessao2">
-                    <div class="infoLivro">
-                        <div class="imagem">
-                            <img src="./assets/img/kimetsu.webp" alt="">
-                            <div class="txt3">
-                                <p>Nome do produto</p>
-                                <h2>Caracteristicas do produto</h2>
-                            </div>
-                        </div>
-                        <div class="unidadeLivro">
-                            <div class="btCompra">
-                                <button class="menor">-</button>
-                                <span>0</span>
-                                <button class="maior">+</button>
-                            </div>
-                            <p>0 dias</p>
-                            <p>$00,00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sessao2">
-                    <div class="infoLivro">
-                        <div class="imagem">
-                            <img src="./assets/img/kimetsu.webp" alt="">
-                            <div class="txt3">
-                                <p>Nome do produto</p>
-                                <h2>Caracteristicas do produto</h2>
-                            </div>
-                        </div>
-                        <div class="unidadeLivro">
-                            <div class="btCompra">
-                                <button class="menor">-</button>
-                                <span>0</span>
-                                <button class="maior">+</button>
-                            </div>
-                            <p>0 dias</p>
-                            <p>$00,00</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sessao3">
+                <div id='sessao3' class="sessao3">
                     <div class="frete">
                         <p>calcule frete</p>
                         <div class="cepOk">
@@ -220,17 +52,17 @@
                             <li>Desconto</li>
                         </ul>
                         <ul>
-                            <li>$00,00</li>
-                            <li>$00,00</li>
-                            <li>$00,00</li>
+                            <li id='valorPedido'></li>
+                            <li id="valorFrete"></li>
+                            <li id="valorDesconto"></li>
                         </ul>
                     </div>
                     <div class="final">
                         <div class="valorF">
                             <p>Valor total</p>
-                            <p>$00,00</p>
+                            <p id="valorTotalPedido"></p>
                         </div>
-                        <input type="button" value="finalizar" placeholder="finalizar compra">
+                        <button id='btnFinalizarPedido' type="submit">Finalizar</button>
                     </div>
                 </div>
             </div>
@@ -240,7 +72,7 @@
             <h1>Rodapé</h1>
         </footer>
     </div>
-    <script src="./assets/js/main.js"></script>
+    <script src="<?= base_url("/carrinho/js/main.js") ?>"></script>
 </body>
 
 </html>

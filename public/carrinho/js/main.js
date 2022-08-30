@@ -1,53 +1,72 @@
 // document.style.overflow = 'hidden';
-const upperButton = document.querySelector('#maior');
-const lowerButton = document.querySelector('#menor');
-const quantityBooks = document.querySelector('#quantityBooks');
-const cep = document.querySelector('#cep');
-let zero = 0;
-quantityBooks.textContent = zero;
+const upperButton = document.querySelector("#maior");
+const lowerButton = document.querySelector("#menor");
+// const quantityBooks = document.querySelector("#quantityBooks");
+const cep = document.querySelector("#cep");
+const booksArea = document.querySelector("#sessao1");
+const freteArea = document.querySelector("#sessao3");
+const btnFinalizarPedido = document.querySelector("#btnFinalizarPedido");
 
-function moreBooks() {
-    zero++;
-    quantityBooks.textContent = zero;
+const valorPedido = document.querySelector("#valorPedido");
+const valorTotalPedido = document.querySelector("#valorTotalPedido");
+const valorFrete = document.querySelector("#valorFrete");
+const valorDesconto = document.querySelector("#valorDesconto");
+
+const baseURL = document.URL.split("/public/")[0] + "/public";
+const urlCartItems = baseURL + "/carrinhos/items";
+
+async function initItems() {
+  const cartItems = await fetch(urlCartItems, {
+    headers: {},
+    method: "GET",
+  }).then((res) => res.json());
+
+  if (!cartItems.length) {
+    btnFinalizarPedido.setAttribute("disabled", true);
+    freteArea.style.display = "none";
+    const noProductMessage = document.createElement("div");
+    noProductMessage.setAttribute("id", "noProductMessage");
+    noProductMessage.innerText = "Nenhum produto para mostrar";
+
+    booksArea.after(noProductMessage);
+  } else {
+    let finalValue = 0;
+    let orderValue = 0;
+    let freteValue = 0;
+    let discountValue = 0;
+    cartItems.forEach((item) => {
+      const itemPrice =
+        Number(item.lote_preco) * Number(item.livroCarrinho_qtd);
+      orderValue += itemPrice;
+
+      const card = document.createElement("div");
+      card.setAttribute("class", "sessao2");
+      card.innerHTML += `
+      <div class="infoLivro">
+      <div class="imagem">
+          <img src="${item.livro_url_capa}" alt="${item.livro_titulo}">
+          <div class="txt3">
+              <p>${item.livro_titulo}</p>
+              <h2>Caracteristicas do produto</h2>
+          </div>
+      </div>
+      <div class="unidadeLivro">
+          <div class="btCompra">
+              <span id="quantityBooks">${item.livroCarrinho_qtd}</span>
+          </div>
+          <p>0 dias</p>
+          <p>$${itemPrice.toFixed(2)}</p>
+      </div>
+      </div>
+      `;
+      booksArea.after(card);
+    });
+
+    valorPedido.innerHTML = "R$ " + orderValue.toFixed(2);
+    valorFrete.innerHTML = "R$ " + freteValue.toFixed(2);
+    valorDesconto.innerHTML = "R$ " + discountValue.toFixed(2);
+    valorTotalPedido.innerHTML =
+      "R$ " + (orderValue + freteValue - discountValue).toFixed(2);
+  }
 }
-upperButton.addEventListener('click', moreBooks);
-
-lowerButton.onclick = function() {
-    if(zero > 0) {
-        zero--;
-        quantityBooks.textContent = zero;
-    } else {
-        zero = 0;
-        quantityBooks.textContent = zero;
-    }
-}
-
-// cep.onkeypress = ()=>{
-//     let cepValueIsEqualFive = cep.value.length + 1 === 5 ? true : false;
-//     if(cepValueIsEqualFive) {
-//         let saveValueBeforeFiveNumbers = cep.value;
-//         cep.placeholder = 'ola';
-//     }
-// }
-
-// cep.onkeypress = function() {
-//     let cepValueIsEqualFive = cep.value.length + 1 === 5 ? true : false;
-//     if(cepValueIsEqualFive) {
-//         console.log(cep.value.length);
-//         console.log(cep.placeholder);
-//         cep.placeholder += '0';
-//         cep.textContent = '14';
-//     }
-// }
-
-// cep.addEventListener('change', () => {
-//     let cepValueIsEqualFive = cep.value.length + 1 === 5 ? true : false;
-//     if(cepValueIsEqualFive) {
-//         // cep 39600-000
-//         // cpf 258.741.369-05
-//         const pattersCPF = /^[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}$/;
-//         const cpf = '258.741.369-05';
-//         // const patters = /^[0-9]{5}-[0-9]{3}$/;
-//         console.log(patters.test(pattersCPF));
-//     }
-// });
+initItems();

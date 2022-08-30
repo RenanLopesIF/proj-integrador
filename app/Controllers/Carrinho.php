@@ -7,7 +7,7 @@ class Carrinho extends BaseController
     public function index()
     {
         $session = session();
-        return view('vitrine');
+        return view('carrinho');
     }
 
     public function insertItem()
@@ -20,5 +20,13 @@ class Carrinho extends BaseController
         $res = $carrinhoModel->insertItem($id_usuario, $id_livro, $qtd);
         if ($res) return "inserido";
         return 'falhou';
+    }
+
+    public function getItems()
+    {
+        $session = session();
+        $carrinhoModel = new \App\Models\CarrinhosModel();
+        $id_usuario = $session->get("id");
+        return $this->response->setJSON($carrinhoModel->getAll($id_usuario));
     }
 }

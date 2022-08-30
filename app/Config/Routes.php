@@ -40,7 +40,7 @@ $routes->get('/cadastrar/usuario', 'CadastroUsuario::index');
 $routes->get('/cadastrar/lote', 'CadastroLote::index');
 $routes->get('/cadastrar/livro', 'CadastroLivro::index');
 $routes->get('/vitrine', 'Vitrine::index');
-$routes->get('/livros', 'Vitrine::livros');
+$routes->get('/carrinho', 'Carrinho::index');
 
 $routes->post('/autenticar', 'AuthController::login');
 $routes->post('/cadastrar/usuario/inserir', 'CadastroUsuario::inserir');
@@ -49,13 +49,16 @@ $routes->post('/cadastrar/livro/inserir', 'CadastroLivro::inserir');
 $routes->post('/carrinho/inserir', 'Carrinho::insertItem');
 
 $routes->get('/cadastrar/usuario/feedback/erro', 'Feedback::cadastrarUsuarioErro');
-$routes->get('/cadastrar/usuario/feedback/sucesso', 'Feedback::cadastrarUsuarioSucesso');
-
 $routes->get('/cadastrar/livro/feedback/erro', 'Feedback::cadastrarLivroErro');
-$routes->get('/cadastrar/livro/feedback/sucesso', 'Feedback::cadastrarLivroSucesso');
-
 $routes->get('/cadastrar/lote/feedback/erro', 'Feedback::cadastrarLoteErro');
+
+$routes->get('/cadastrar/usuario/feedback/sucesso', 'Feedback::cadastrarUsuarioSucesso');
+$routes->get('/cadastrar/livro/feedback/sucesso', 'Feedback::cadastrarLivroSucesso');
 $routes->get('/cadastrar/lote/feedback/sucesso', 'Feedback::cadastrarLoteSucesso');
+
+$routes->get('/livros', 'Vitrine::livros');
+$routes->get('/carrinhos/items', 'Carrinho::getItems');
+
 
 /*
  * --------------------------------------------------------------------

@@ -17,6 +17,7 @@ class LivrosCarrinhoModel extends Model
     protected $allowedFields = ['id_livro', 'id_carrinho', 'qtd'];
 
     protected $useTimestamps = false;
+    protected $createdField  = 'created_at';
 
     protected $validationRules    = [];
     protected $validationMessages = [];
@@ -25,13 +26,13 @@ class LivrosCarrinhoModel extends Model
     public function insertItem($id_usuario, $id_livro, $qtd)
     {
         $db = \Config\Database::connect();
-        $db->transBegin();
-        $db->query("INSERT INTO livros_carrinho VALUES(default, :id_livro:, (select id from carrinhos c where id_usuario = :id_usuario:), :qtd:)", [
-            "id_livro" => $id_livro,
-            "id_usuario" => $id_usuario,
-            "qtd" => $qtd
-        ]);
         try {
+            $db->transBegin();
+            $db->query("INSERT INTO livros_carrinho VALUES(default, :id_livro:, (select id from carrinhos c where id_usuario = :id_usuario:), :qtd:)", [
+                "id_livro" => $id_livro,
+                "id_usuario" => $id_usuario,
+                "qtd" => $qtd
+            ]);
             if ($db->transStatus() === false) {
                 $db->transRollback();
                 return false;
