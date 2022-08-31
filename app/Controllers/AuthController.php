@@ -18,6 +18,5 @@ class AuthController extends BaseController
         }
         $session->setFlashdata('passwordIsIncorrect', true);
         return redirect('/');
-        // , ["passwordIsIncorrect" => true]
     }
 }
