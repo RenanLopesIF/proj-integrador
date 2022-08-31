@@ -48,14 +48,6 @@ $routes->post('/cadastrar/lote/inserir', 'CadastroLote::inserir');
 $routes->post('/cadastrar/livro/inserir', 'CadastroLivro::inserir');
 $routes->post('/carrinho/inserir', 'Carrinho::insertItem');
 
-$routes->get('/cadastrar/usuario/feedback/erro', 'Feedback::cadastrarUsuarioErro');
-$routes->get('/cadastrar/livro/feedback/erro', 'Feedback::cadastrarLivroErro');
-$routes->get('/cadastrar/lote/feedback/erro', 'Feedback::cadastrarLoteErro');
-
-$routes->get('/cadastrar/usuario/feedback/sucesso', 'Feedback::cadastrarUsuarioSucesso');
-$routes->get('/cadastrar/livro/feedback/sucesso', 'Feedback::cadastrarLivroSucesso');
-$routes->get('/cadastrar/lote/feedback/sucesso', 'Feedback::cadastrarLoteSucesso');
-
 $routes->get('/livros', 'Home::livros');
 $routes->get('/carrinhos/items', 'Carrinho::getItems');
 
