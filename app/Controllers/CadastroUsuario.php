@@ -6,7 +6,7 @@ class CadastroUsuario extends BaseController
 {
     public function index()
     {
-        return view('formulario_cadastro');
+        return view('cadastro_usuario');
         // return view('vitrine');
     }
 
