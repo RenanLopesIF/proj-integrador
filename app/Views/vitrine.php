@@ -84,7 +84,7 @@
 
         <div style="position: fixed; top: 0; right: 0;">
             <div aria-live="polite" aria-atomic="true" style="margin-top: 20px; position: relative; min-height: 200px;">
-                <div class="toast show" data-autohide="true" style="border-radius: 15px 0 0 15px;">
+                <div class="toast hide" data-autohide="true" style="border-radius: 15px 0 0 15px;">
                     <div id="box-toast" style="border-radius: 15px 0 0 15px;min-height: 80px;" class="toast-body text-white">
                         <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
                         <span id="msg-toast"></span>

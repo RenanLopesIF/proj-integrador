@@ -164,6 +164,13 @@ color: var(--color-beje-400);
     padding:1rem 0.10rem 0 0;
 }
 
+#btn-cadastrar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 1330px){
     .form-image{
         display: none;

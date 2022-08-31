@@ -16,6 +16,8 @@ class AuthController extends BaseController
 
             return redirect('vitrine');
         }
-        return redirect('login');
+        $session->setFlashdata('passwordIsIncorrect', true);
+        return redirect('/');
+        // , ["passwordIsIncorrect" => true]
     }
 }
