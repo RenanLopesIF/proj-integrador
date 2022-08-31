@@ -16,7 +16,13 @@ class AuthController extends BaseController
 
             return redirect('home');
         }
-        $session->setFlashdata('passwordIsIncorrect', true);
+        $flashData = [
+            'toast-color' => "#ff6262",
+            'toast-msg' => "Usuário ou senha incorreto.",
+            'toast-msg-secondary' => "Tente novamente!"
+        ];
+
+        $session->setFlashdata($flashData);
         return redirect('/');
     }
 }

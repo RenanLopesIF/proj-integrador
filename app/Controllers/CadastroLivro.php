@@ -24,7 +24,24 @@ class CadastroLivro extends BaseController
         $livrosModel = new \App\Models\LivrosModel();
         $res = $livrosModel->insertOne($_POST);
 
-        if ($res) return redirect('cadastrar/livro/feedback/sucesso');
-        else return redirect("cadastrar/livro/feedback/erro");
+
+        $flashDataSuccess = [
+            'toast-color' => "#66cf66",
+            'toast-msg' => "Livro cadastrado com sucesso.",
+            // 'toast-msg-secondary' => "Efetue seu login!"
+        ];
+        $flashDataError = [
+            'toast-color' => "#ff6262",
+            'toast-msg' => "Houve uma falha ao tentar cadastrar livro.",
+            'toast-msg-secondary' => "Verifique os dados e tente novamente!"
+        ];
+
+        if ($res) {
+            $session->setFlashdata($flashDataSuccess);
+            return redirect('cadastrar/livro');
+        } else {
+            $session->setFlashdata($flashDataError);
+            return redirect("cadastrar/livro");
+        };
     }
 }

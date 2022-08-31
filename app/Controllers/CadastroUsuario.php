@@ -12,10 +12,27 @@ class CadastroUsuario extends BaseController
 
     public function inserir()
     {
+        $session = session();
         $usuariosModel = new \App\Models\UsuariosModel();
         $res = $usuariosModel->insertOne($_POST);
 
-        if ($res) return redirect('cadastrar/usuario/feedback/sucesso');
-        else return redirect("cadastrar/usuario/feedback/erro");
+        $flashDataSuccess = [
+            'toast-color' => "#66cf66",
+            'toast-msg' => "Usuário cadastrado com sucesso.",
+            'toast-msg-secondary' => "Efetue seu login!"
+        ];
+        $flashDataError = [
+            'toast-color' => "#ff6262",
+            'toast-msg' => "Falha ao tentar cadastrar usuário.",
+            'toast-msg-secondary' => "Verifique os dados e tente novamente!"
+        ];
+
+        if ($res) {
+            $session->setFlashdata($flashDataSuccess);
+            return redirect('/');
+        } else {
+            $session->setFlashdata($flashDataError);
+            return redirect("cadastrar/usuario");
+        };
     }
 }
