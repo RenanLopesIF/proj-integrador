@@ -22,7 +22,7 @@
                     <h1>Cadastre-se</h1>
                 </div>
                 <div class="login-button">
-                    <button type="button" class="btn btn-warning bttwo">Entrar</button>
+                    <a href="<?= base_url("/") ?>"><button type="button" class="btn btn-warning bttwo">Logar-se</button></a>
                 </div>
             </div>
             <div class="input-group">
