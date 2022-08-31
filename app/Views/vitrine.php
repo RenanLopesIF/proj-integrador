@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +53,7 @@
 
         </div>
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -76,7 +77,17 @@
                         <div> <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             <button id="modal-botao-comprar" type="button" class="btn btn-primary">Comprar</button>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div style="position: fixed; top: 0; right: 0;">
+            <div aria-live="polite" aria-atomic="true" style="margin-top: 20px; position: relative; min-height: 200px;">
+                <div class="toast show" data-autohide="true" style="border-radius: 15px 0 0 15px;">
+                    <div id="box-toast" style="border-radius: 15px 0 0 15px;min-height: 80px;" class="toast-body text-white">
+                        <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                        <span id="msg-toast"></span>
                     </div>
                 </div>
             </div>

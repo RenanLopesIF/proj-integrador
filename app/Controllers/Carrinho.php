@@ -18,8 +18,8 @@ class Carrinho extends BaseController
         $id_livro = $_POST['id_livro'];
         $qtd = $_POST["qtd"];
         $res = $carrinhoModel->insertItem($id_usuario, $id_livro, $qtd);
-        if ($res) return "inserido";
-        return 'falhou';
+        if ($res) return $this->response->setJSON(["status" => "success"]);
+        return $this->response->setJSON(["status" => "fail"]);
     }
 
     public function getItems()

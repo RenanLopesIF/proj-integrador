@@ -9,6 +9,8 @@ const modalPrecoLivro = document.querySelector("#modal-preco-livro");
 const modalAutorLivro = document.querySelector("#modal-autor-livro");
 const modalBotaoComprar = document.querySelector("#modal-botao-comprar");
 const qtdItems = document.querySelector("#qtd-items");
+const boxToast = document.querySelector("#box-toast");
+const msgToast = document.querySelector("#msg-toast");
 
 const qtd = {
   max: 1,
@@ -54,8 +56,23 @@ async function insertIntoCart(id_livro, qtd) {
 
   formPurchase.appendChild(inputQtd);
   formPurchase.appendChild(inputId);
-  galleryElement.appendChild(formPurchase);
-  formPurchase.submit();
+
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", urlInserIntoCart);
+  xhr.onload = (ev) => {
+    const res = JSON.parse(ev.target.response);
+    console.log("Success, server responded with:", ev.target.response);
+    if (res.status == "success") {
+      boxToast.style.backgroundColor = "#66cf66";
+      msgToast.innerText = "Item adicionado ao carrinho";
+      $(document).ready(function () {
+        $(".toast").toast("show");
+      });
+    }
+  };
+
+  const formData = new FormData(formPurchase);
+  xhr.send(formData);
 }
 
 async function init() {
