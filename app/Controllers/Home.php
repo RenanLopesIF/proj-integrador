@@ -2,12 +2,12 @@
 
 namespace App\Controllers;
 
-class Vitrine extends BaseController
+class Home extends BaseController
 {
     public function index()
     {
         $session = session();
-        return view('vitrine');
+        return view('home');
     }
 
     public function livros()

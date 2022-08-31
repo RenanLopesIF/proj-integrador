@@ -11,8 +11,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="<?= base_url("vitrine/css/style.css") ?>">
-    <link rel="stylesheet" href="<?= base_url("vitrine/css/vitrine.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("home/css/style.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("home/css/home.css") ?>">
     <title>loja</title>
 </head>
 
@@ -95,7 +95,7 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
         </script>
-        <script src="<?= base_url("vitrine/js/index.js") ?>"></script>
+        <script src="<?= base_url("home/js/index.js") ?>"></script>
 </body>
 
 </html>

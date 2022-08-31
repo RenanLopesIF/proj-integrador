@@ -14,7 +14,7 @@ class AuthController extends BaseController
                 $session->set($key, $value);
             }
 
-            return redirect('vitrine');
+            return redirect('home');
         }
         $session->setFlashdata('passwordIsIncorrect', true);
         return redirect('/');

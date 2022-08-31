@@ -39,7 +39,7 @@ $routes->get('/', 'Login::index');
 $routes->get('/cadastrar/usuario', 'CadastroUsuario::index');
 $routes->get('/cadastrar/lote', 'CadastroLote::index');
 $routes->get('/cadastrar/livro', 'CadastroLivro::index');
-$routes->get('/vitrine', 'Vitrine::index');
+$routes->get('/home', 'Home::index');
 $routes->get('/carrinho', 'Carrinho::index');
 
 $routes->post('/autenticar', 'AuthController::login');
@@ -56,7 +56,7 @@ $routes->get('/cadastrar/usuario/feedback/sucesso', 'Feedback::cadastrarUsuarioS
 $routes->get('/cadastrar/livro/feedback/sucesso', 'Feedback::cadastrarLivroSucesso');
 $routes->get('/cadastrar/lote/feedback/sucesso', 'Feedback::cadastrarLoteSucesso');
 
-$routes->get('/livros', 'Vitrine::livros');
+$routes->get('/livros', 'Home::livros');
 $routes->get('/carrinhos/items', 'Carrinho::getItems');
 
 
