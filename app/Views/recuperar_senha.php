@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -29,6 +29,11 @@
                     <div class="data-field">
                         <label for="email">Informe um e-mail, de confirmação.</label>
                         <input id="email" type="email" name="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="data-field">
+                        <label for="name">Informe seu nome.</label>
+                        <input id="name" type="name" name="name" placeholder="name" required>
                     </div>
 
                     <div class="data-field">

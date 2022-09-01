@@ -18,7 +18,7 @@ body{
     display: flex;
     justify-content: center;
     background-color: var(--color-amarelo-200);
-    box-shadow: 3px 3px 5px rgba(0,0,0, .212);
+
 }
 .form-image{
     display: flex;
@@ -41,7 +41,8 @@ body{
 .form-header{
     display: flex;
     margin-bottom: 3rem;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
 .field-group{
@@ -54,7 +55,6 @@ body{
     display: flex;
     flex-direction: column;
     margin-bottom: 1.1rem;
-    padding: 0 0.5rem 0 0.5rem;
 }
 .data-field input{
     margin: 0.5rem 0;
@@ -94,6 +94,7 @@ color: var(--color-beje-400);
     margin-top: 2.1rem;
     border: none;
     background-color: var(--color-amarelo-400);
+    box-shadow: 3px 3px 5px rgba(0,0,0, .200);
     color: white;
     padding: 0.3rem;
     border-radius: 5px;
@@ -111,31 +112,4 @@ color: var(--color-beje-400);
     color: white;
     border-radius: 5px;
     text-align: center;
-}
-
-
-@media screen and (max-width: 1330px){
-    .form-image{
-        display: none;
-    }
-    .container{
-        width: 50%;
-    }
-    .form{
-        width: 100%;
-
-    }
-}
-@media screen and (max-width:1064px){
-    .container{
-        width: 90%;
-        height: auto;
-    }
-    .field-group{
-        flex-direction: column;
-        overflow-y: scroll;
-        max-height: 10rem;
-        padding-right: 5rem;
-    }
-
 }
