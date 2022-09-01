@@ -17,14 +17,7 @@ body{
 h1{
     color: var( --color-amarelo-400);
 }
-
-.container{
-    width: 80%;
-    height: 90vh;/*mudar no final++*/
-    display: flex;
-    box-shadow: 5px 5px 10px rgba(0,0,0, .212);
-}
-.form-image{
+.color-side{
     display: flex;
     width: 50%;
     justify-content: center;
@@ -33,8 +26,24 @@ h1{
     padding: 1rem;
 
 }
-.form-image img{
+
+.container{
+    width: 80%;
+    height: 90vh;/*mudar no final++*/
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0,0,0, .200);
+}
+.imagem img{
     width: 31rem;
+}
+.imagem{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-cinza-300);
+    padding: 1rem;
+
 }
 .form{
     width: 50%;
@@ -67,16 +76,7 @@ h1{
     font-weight: 500;
     color: white;
 }
-.form-header h1::after{
-    content: '';
-    display: block;
-    width: 5rem;
-    height: 0.3rem;
-    background-color: var(--color-amarelo-200);
-    margin: 0 auto;
-    position: absolute;
-    border-radius: 10px;
-}
+
 .input-group{
     display: flex;
     flex-wrap: wrap;
@@ -94,7 +94,7 @@ h1{
     padding: 0.8rem 1.2rem;
     border: none;
     border-radius: 10px;
-    box-shadow: 1px 1px 6px #0000001c;
+    box-shadow: 1px 1px 6px #00000052;
 }
 .input-box input:hover{
     background-color: var(--color-amarelo-200);
@@ -105,9 +105,9 @@ h1{
 }
 .input-box label,
 .gender-title h6{
-font-size: 0.75rem;
-font-weight: 600;
-color: var(--color-beje-400);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-beje-400);
 }
 .input-box input::placeholder{
     color: var(--color-beje-600);
@@ -142,6 +142,23 @@ color: var(--color-beje-400);
     /* height: 3.4rem; */
     margin-top: 2.1rem;
     /* margin-bottom: 1rem; */
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.confirm-button{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.confirm-button button{
+    margin: 0 1rem 0 1rem;
+    width: 100%;
+    height: 35px;
+    margin-top: 2.1rem;
     border: none;
     background-color: var(--color-amarelo-400);
     color: white;
@@ -156,7 +173,7 @@ color: var(--color-beje-400);
     color: white;
 }
 
-.continue-button p a{
+.form p a{
     display: flex;
     width: 100%;
     color: var(--color-beje-600);
@@ -171,16 +188,17 @@ color: var(--color-beje-400);
     text-decoration: none;
 }
 
+
 @media screen and (max-width: 1330px){
-    .form-image{
-        display: none;
+    .form{
+        width: 100%;
+        
     }
     .container{
         width: 50%;
     }
-    .form{
-        width: 100%;
-
+    .imagem{
+        display: none;
     }
 }
 @media screen and (max-width:1064px){
@@ -194,13 +212,5 @@ color: var(--color-beje-400);
         max-height: 10rem;
         padding-right: 5rem;
     }
-    .gender-input{
-        margin-top: 2rem;
-    }
-    .gender-group{
-        flex-direction: column;
-    }
-    .gender-input{
-        margin-top: 0.5rem;
-    }
+
 }
