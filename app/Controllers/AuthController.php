@@ -25,4 +25,11 @@ class AuthController extends BaseController
         $session->setFlashdata($flashData);
         return redirect('/');
     }
+
+    public function logout()
+    {
+        $session = session();
+        $session->destroy();
+        return redirect("/");
+    }
 }

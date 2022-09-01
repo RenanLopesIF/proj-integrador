@@ -41,6 +41,7 @@ $routes->get('/cadastrar/lote', 'CadastroLote::index');
 $routes->get('/cadastrar/livro', 'CadastroLivro::index');
 $routes->get('/home', 'Home::index');
 $routes->get('/carrinho', 'Carrinho::index');
+$routes->get('/logout', 'AuthController::logout');
 
 $routes->post('/autenticar', 'AuthController::login');
 $routes->post('/cadastrar/usuario/inserir', 'CadastroUsuario::inserir');
