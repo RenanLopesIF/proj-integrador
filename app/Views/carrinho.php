@@ -29,6 +29,29 @@
                         <p>Preço</p>
                     </div>
                 </div>
+
+                <div class="infoLivro">
+                    <div class="imagem">
+                        <img src="./assets/img/kimetsu.webp" alt="">
+                        <div class="txt3">
+                            <p>Nome do produto</p>
+                            <h2>Caracteristicas do produto</h2>
+                        </div>
+                    </div>
+                    <div class="unidadeLivro">
+                        <div class="btCompra">
+                            <button class="menor">-</button>
+                            <span>0</span>
+                            <button class="maior">+</button>
+                        </div>
+                        <p>0 dias</p>
+                        <p>$00,00</p>
+                        <div class="icon">
+                            <a href=""><img src="./assets/img/delete_forever_FILL0_wght400_GRAD0_opsz48.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+
                 <div id='sessao3' class="sessao3">
                     <div class="frete">
                         <p>calcule frete</p>
