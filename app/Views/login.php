@@ -39,14 +39,14 @@
 
             <img src="<?= base_url("/login/img/moca_dog.svg") ?>" alt="">
         </div>
-        <div class="form">
+        <div class="container-child">
             <form method="POST" action="<?= base_url("/autenticar") ?>">
                 <div class="form-header">
                     <div class="title">
                         <h1>Conecte-se</h1>
                     </div>
                 </div>
-                <div class="input-group">
+                <div class="input-group grupo-inputs">
                     <div class="input-campo">
                         <label for="email">Usuário</label>
                         <input id="email" type="text" name="username" placeholder="Username" required>
