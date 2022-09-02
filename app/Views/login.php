@@ -47,11 +47,11 @@
                     </div>
                 </div>
                 <div class="input-group">
-                    <div class="input-box">
+                    <div class="input-campo">
                         <label for="email">Usuário</label>
                         <input id="email" type="text" name="username" placeholder="Username" required>
                     </div>
-                    <div class="input-box">
+                    <div class="input-campo">
                         <label for="password">Senha</label>
                         <input id="password" type="password" name="password" placeholder="Senha" required>
                     </div>
