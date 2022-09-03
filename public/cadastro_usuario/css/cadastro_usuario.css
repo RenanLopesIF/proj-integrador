@@ -14,6 +14,7 @@ body {
 }
 .container {
   display: grid;
+  height: 100%;
   grid-template-columns: 0.45fr 0.55fr;
 }
 .form-image {
@@ -64,61 +65,66 @@ body {
   color: white;
 }
 
-.input-group {
+.field-group {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 1rem 0;
 }
-.input-box {
+.data-field {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.1rem;
 }
-.input-box input {
+.data-field input {
   margin: 0.6rem 0;
   padding: 0.8rem 1.2rem;
   border: none;
   border-radius: 10px;
-  box-shadow: 1px 1px 6px #0000001c;
-}
-.input-box input:hover {
   background-color: var(--color-amarelo-200);
+}
+.data-field input:hover {
+  background-color: var(--color-amarelo-300);
   transition: all 1s;
 }
-.input-box input:focus-visible {
+.data-field input:focus-visible {
   outline: 1px solid var(--color-amarelo-200);
 }
-.input-box label,
+.data-field label,
 .gender-title h6 {
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.85rem;
+  font-weight: 700;
   color: var(--color-beje-400);
 }
-.input-box input::placeholder {
+.data-field input::placeholder {
   color: var(--color-beje-600);
 }
 .gender-group {
   display: flex;
-  justify-content: space-between;
-  margin-top: 0.62rem;
-  padding: 0 0 0.5rem;
+  justify-content: space-around;
+  margin-top: 0.4rem;
+  padding: 0 60% 0 0;
 }
-.gender-input {
+.gender-field {
   display: flex;
   align-items: center;
 }
-.gender-input input {
+.gender-field input {
   margin-right: 0.35rem;
 }
-.gender-input label {
+.gender-field label {
   font-size: 0.81rem;
   font-weight: 600;
   color: var(--color-beje-400);
 }
-.continue-button button {
+.registration-button {
+  display: flex;
+  flex-direction: row;
   width: 100%;
+}
+.registration-button button {
   margin-top: 2.5rem;
+  margin: 2rem 4rem 0 0;
   border: none;
   background-color: var(--color-amarelo-400);
   color: white;
@@ -126,18 +132,19 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-.continue-button button:hover {
+.registration-button button:hover {
   color: white;
 }
 .bttwo:hover {
   color: white;
 }
-.continue-button button a {
+.registration-button button a {
   text-decoration: none;
   font-size: 0.93rem;
   font-weight: 500;
   color: white;
 }
+
 @media screen and (max-width: 1330px) {
   .form-image {
     display: none;
@@ -155,16 +162,16 @@ body {
     min-height: 100%;
     flex: 1;
   }
-  .input-group {
+  .field-group {
     padding-right: 5rem;
   }
-  .gender-input {
+  .gender-field {
     margin-top: 2rem;
   }
   .gender-group {
     flex-direction: column;
   }
-  .gender-input {
+  .gender-field {
     margin-top: 0.5rem;
   }
 }
