@@ -15,7 +15,7 @@
 
 <body>
     <div class="container">
-        <header class="cabeca">cabeçalho</header>
+        <header class="header">cabeçalho</header>
         <div class="containerFilha">
             <div class="carrinho">
                 <div id="sessao1" class="sessao1">
@@ -28,6 +28,35 @@
                         <p>Tempo de entrega</p>
                         <p>Preço</p>
                     </div>
+
+                    <div class="infoLivro">
+                        <div class="imagem">
+                            <img src="./assets/img/kimetsu.webp" alt="">
+                            <div class="txt3">
+                                <h2 id="modal-titulo-livro">titulo </h2>
+                                <p id="modal-autor-livro">atuor </p>
+                                <p id="modal-editora">editora </p>
+                                <p id="modal-edicao">edição </p>
+                                <p id="modal-ano-publicacao">ano publicaçao</p>
+                                <p id="modal-idioma">idioma </p>
+                                <p id="modal-total-paginas">numro de paginas</p>
+                                <p id="modal-tipo-capa">estilo da capa</p>
+                                <p id="modal-genero">genero </p>
+                                <p id="modal-preco-livro">preço </p>
+                            </div>
+                        </div>
+                        <div class="unidadeLivro">
+                            <div class="btCompra">
+                                <button class="menor">-</button>
+                                <span>0</span>
+                                <button class="maior">+</button>
+                            </div>
+                            <p>0 dias</p>
+                            <p>$00,00</p>
+                            <button><img src="./assets/img/delete_forever_FILL0_wght400_GRAD0_opsz48.svg"></button>
+                        </div>
+                    </div>
+
                 </div>
                 <div id='sessao3' class="sessao3">
                     <div class="frete">
