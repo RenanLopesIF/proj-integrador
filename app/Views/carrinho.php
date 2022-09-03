@@ -46,9 +46,7 @@
                         </div>
                         <p>0 dias</p>
                         <p>$00,00</p>
-                        <div class="icon">
-                            <a href=""><img src="./assets/img/delete_forever_FILL0_wght400_GRAD0_opsz48.svg" alt=""></a>
-                        </div>
+                        <button><img src="./assets/img/delete_forever_FILL0_wght400_GRAD0_opsz48.svg"></button>
                     </div>
                 </div>
 
