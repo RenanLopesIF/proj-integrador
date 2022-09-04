@@ -1,0 +1,50 @@
+.vtr-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-cinza-700);
+}
+
+.vtr-navigation a {
+    color: var(--color-amarelo-400);
+    width: 40px;
+}
+
+.vtr-navigation svg {
+    fill: var(--color-amarelo-400);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.menu li a {
+    width: auto;
+    color: var(--color-amarelo-400);
+    font-size: 17px;
+    padding: 26px;
+}
+
+.menu li a:hover {
+    background-color: var(--color-cinza-500);
+}
+
+.menu ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-logout {
+    color: #fff
+}

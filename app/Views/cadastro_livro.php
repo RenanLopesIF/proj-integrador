@@ -18,6 +18,9 @@
 </head>
 
 <body>
+    <?php
+    echo $this->include('cabecalho');
+    ?>
     <div class="container">
         <?php
         if (session()->getFlashdata('toast-msg') != null) {
@@ -109,7 +112,7 @@
 
                 <div class="input-box">
                     <label for="sinopse">Sinopse</label>
-                    <textarea name="sinopse" id="sinopse" cols="70" rows="5"></textarea>
+                    <textarea name="sinopse" id="sinopse" cols="70" rows="4"></textarea>
                 </div>
 
             </div>

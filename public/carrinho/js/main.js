@@ -56,6 +56,9 @@ async function initItems() {
           </div>
           <p>0 dias</p>
           <p>$${itemPrice.toFixed(2)}</p>
+          <a href="#">
+            <button><img src="${baseURL}/carrinho/img/delete_forever_FILL0_wght400_GRAD0_opsz48.svg""></button>
+          </a>
       </div>
       </div>
       `;

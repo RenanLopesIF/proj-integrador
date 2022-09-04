@@ -14,8 +14,11 @@
 </head>
 
 <body>
+    <?php
+    echo $this->include('cabecalho');
+    ?>
     <div class="container">
-        <header class="cabeca">cabeçalho</header>
+        <!-- <header class="cabeca">cabeçalho</header> -->
         <div class="containerFilha">
             <div class="carrinho">
                 <div id="sessao1" class="sessao1">
@@ -27,26 +30,6 @@
                         <p>Quantidade</p>
                         <p>Tempo de entrega</p>
                         <p>Preço</p>
-                    </div>
-                </div>
-
-                <div class="infoLivro">
-                    <div class="imagem">
-                        <img src="./assets/img/kimetsu.webp" alt="">
-                        <div class="txt3">
-                            <p>Nome do produto</p>
-                            <h2>Caracteristicas do produto</h2>
-                        </div>
-                    </div>
-                    <div class="unidadeLivro">
-                        <div class="btCompra">
-                            <button class="menor">-</button>
-                            <span>0</span>
-                            <button class="maior">+</button>
-                        </div>
-                        <p>0 dias</p>
-                        <p>$00,00</p>
-                        <button><img src="./assets/img/delete_forever_FILL0_wght400_GRAD0_opsz48.svg"></button>
                     </div>
                 </div>
 
