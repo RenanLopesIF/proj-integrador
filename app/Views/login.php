@@ -58,8 +58,8 @@
 
                 </div>
                 <div class="confirm-button">
-                    <button type="submit" class="btn btn-warning bttwo">Entrar</button>
                     <a id="btn-cadastrar" href="<?= base_url("/cadastrar/usuario") ?>"><button type="button" class="btn btn-warning bttwo">Criar conta</button></a>
+                    <button type="submit" class="btn btn-warning bttwo">Entrar</button>
                 </div>
             </form>
             <p><a href="#">Esqueceu a senha?</a></p>
