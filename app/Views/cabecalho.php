@@ -5,10 +5,9 @@
     <h2>Loja virtual</h2>
     <nav class="navbar">
         <ul class="menu">
-            <li><a href="">Home</a></li>
-            <li><a href="">Produtos</a></li>
-            <li><a href="">Login</a></li>
-            <li><a href="">Criar conta</a></li>
+            <li><a href="<?= base_url('/index.php/home') ?>">Home</a></li>
+            <li><a href="<?= base_url('/index.php/cadastrar/lote') ?>">Cadastrar lote</a></li>
+            <li><a href="<?= base_url('/index.php/cadastrar/livro') ?>">Cadastrar livro</a></li>
         </ul>
     </nav>
     <a href="<?= base_url('/index.php/carrinho') ?>">
