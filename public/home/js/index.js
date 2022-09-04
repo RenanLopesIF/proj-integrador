@@ -7,7 +7,18 @@ const modalImagemLivro = document.querySelector("#modal-imagem-livro");
 const modalTituloLivro = document.querySelector("#modal-titulo-livro");
 const modalPrecoLivro = document.querySelector("#modal-preco-livro");
 const modalAutorLivro = document.querySelector("#modal-autor-livro");
+
+const modalEditora = document.querySelector("#modal-editora");
+const modalEdicao = document.querySelector("#modal-edicao");
+const modalAnoPublicacao = document.querySelector("#modal-ano-publicacao");
+const modalIdioma = document.querySelector("#modal-idioma");
+const modalTotalPaginas = document.querySelector("#modal-total-paginas");
+const modalTipoCapa = document.querySelector("#modal-tipo-capa");
+const modalGenero = document.querySelector("#modal-genero");
+const modalSinopse = document.querySelector("#modal-sinopse");
+
 const modalBotaoComprar = document.querySelector("#modal-botao-comprar");
+
 const qtdItems = document.querySelector("#qtd-items");
 const boxToast = document.querySelector("#box-toast");
 const msgToast = document.querySelector("#msg-toast");
@@ -81,6 +92,8 @@ async function init() {
     method: "GET",
   }).then((res) => res.json());
 
+  console.log(livros);
+
   livros.forEach((livro) => {
     const cardElement = document.createElement("div");
     cardElement.setAttribute("class", "image-holder");
@@ -98,7 +111,7 @@ async function init() {
     textBoxElement.setAttribute("class", "text");
     textBoxElement.innerHTML = `<h2>${livro.titulo} Vol. ${livro.edicao}</h2>
     <p>R$ ${Number(livro.preco).toFixed(2)}</p>
-    <p>${livro.autor}</p>`;
+    <p>por ${livro.autor}</p>`;
 
     imageBoxElement.appendChild(imageElement);
     cardElement.appendChild(imageBoxElement);
@@ -110,8 +123,17 @@ async function init() {
       qtdItems.removeEventListener("change", changeQtd);
       modalImagemLivro.setAttribute("src", livro.url_capa);
       modalTituloLivro.innerHTML = livro.titulo;
-      modalPrecoLivro.innerHTML = Number(livro.preco).toFixed(2);
-      modalAutorLivro.innerHTML = livro.autor;
+      modalPrecoLivro.innerHTML = "R$ " + Number(livro.preco).toFixed(2);
+      modalAutorLivro.innerHTML = "Escrito por " + livro.autor;
+      modalEditora.innerHTML = "Editora " + livro.editora;
+      modalEdicao.innerHTML = livro.edicao + "° edição";
+      modalAnoPublicacao.innerHTML = livro.ano_publicacao;
+      modalIdioma.innerHTML = livro.idioma;
+      modalTotalPaginas.innerHTML = livro.total_paginas + " páginas";
+      modalTipoCapa.innerHTML = "Capa " + livro.tipo_de_capa;
+      modalGenero.innerHTML = livro.genero;
+      modalSinopse.innerHTML = livro.sinopse;
+
       modalBotaoComprar.onclick = () => {
         insertIntoCart(livro.id, qtd.current);
       };
