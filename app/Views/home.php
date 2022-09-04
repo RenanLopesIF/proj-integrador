@@ -43,27 +43,45 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Item para ser comprado</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        <h2 id="modal-titulo-livro"></h2>
+                    </h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body bg-secondary">
-                    <p id="modal-sinopse">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, voluptates dolor! Repellat voluptatem odio, perspiciatis ducimus iure deserunt, ut quasi reiciendis veniam sint cupiditate, aliquid maiores perferendis tempora fugiat nisi.</p>
+                    <!-- <h5 id="modal-sinopse"></h5>
                     <div class="gallery">
                         <div class="image-holder">
                             <img id="modal-imagem-livro" src="./home/img/kimetsu.webp" alt="Capa do livro">
                             <div class="text">
-                                <h2 id="modal-titulo-livro">titulo</h2>
-                                <p id="modal-autor-livro">luan ss</p>
-                                <p id="modal-editora">arco</p>
-                                <p id="modal-edicao">primeira edição</p>
-                                <p id="modal-ano-publicacao">2018</p>
-                                <p id="modal-idioma">português</p>
-                                <p id="modal-total-paginas">numro de paginas</p>
-                                <p id="modal-tipo-capa">estilo da capa</p>
-                                <p id="modal-genero">aventura, ação</p>
-                                <p id="modal-preco-livro">24$$</p>
-                                <p id="modal-sinopse"></p>
+                                <h2 id="modal-titulo-livro"></h2>
+                                <p id="modal-autor-livro"></p>
+                                <p id="modal-editora"></p>
+                                <p id="modal-edicao"></p>
+                                <p id="modal-idioma"></p>
+                                <p id="modal-total-paginas"></p>
+                                <p id="modal-tipo-capa"></p>
+                                <p id="modal-genero"></p>
+                                <p id="modal-ano-publicacao"></p>
+                                <p id="modal-preco-livro"></p>
                             </div>
+                        </div>
+                    </div> -->
+                    <div id="modal-gallery">
+                        <div id="modal-body-top">
+                            <img id="modal-imagem-livro" alt="Capa do livro">
+                            <h5 id="modal-sinopse"></h5>
+                        </div>
+                        <div id="modal-body-bot">
+                            <p id="modal-autor-livro"></p>
+                            <p id="modal-editora"></p>
+                            <p id="modal-edicao"></p>
+                            <p id="modal-idioma"></p>
+                            <p id="modal-total-paginas"></p>
+                            <p id="modal-tipo-capa"></p>
+                            <p id="modal-genero"></p>
+                            <p id="modal-ano-publicacao"></p>
+                            <p id="modal-preco-livro"></p>
                         </div>
                     </div>
                 </div>
