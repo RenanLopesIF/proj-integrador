@@ -18,6 +18,9 @@
 </head>
 
 <body>
+    <?php
+    echo $this->include('cabecalho');
+    ?>
     <div class="container">
         <?php
         if (session()->getFlashdata('toast-msg') != null) {

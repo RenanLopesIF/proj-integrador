@@ -14,8 +14,11 @@
 </head>
 
 <body>
+    <?php
+    echo $this->include('cabecalho');
+    ?>
     <div class="container">
-        <header class="cabeca">cabeçalho</header>
+        <!-- <header class="cabeca">cabeçalho</header> -->
         <div class="containerFilha">
             <div class="carrinho">
                 <div id="sessao1" class="sessao1">
@@ -29,6 +32,7 @@
                         <p>Preço</p>
                     </div>
                 </div>
+
                 <div id='sessao3' class="sessao3">
                     <div class="frete">
                         <p>calcule frete</p>
