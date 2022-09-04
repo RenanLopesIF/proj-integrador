@@ -35,7 +35,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'trabalho_integrador',
+        'database' => 'if_projeto_integrador',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
