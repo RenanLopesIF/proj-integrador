@@ -26,7 +26,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 /* alinhamento parte direita */
 .carrinho {
@@ -63,7 +63,7 @@
 .txt2 p {
   margin: 0;
   font-size: 15px;
-  padding: 0 0 0.1rem 1rem;
+  padding: 0.9rem 1.6rem 0.1rem 1rem;
   color: var(--color-amarelo-400);
   font-family: "Open Sans", sans-serif;
 }
@@ -77,9 +77,10 @@
 .txt2 {
   display: flex;
   align-items: flex-end;
-  justify-content: space-around;
+  justify-content: flex-start;
+  padding-left: 0.6rem;
   text-align: center;
-  width: 45%;
+  width: 40%;
   font-family: "Open Sans", sans-serif;
 }
 /* inicio da sessão 2 */
