@@ -1,3 +1,20 @@
+ul{
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+  }
+
+  p, li, a{
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  h1, h2, p{
+    color: var(--color-amarelo-400);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 25px;
+  }
+
 .vtr-navigation {
     display: flex;
     align-items: center;
