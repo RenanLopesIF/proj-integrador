@@ -371,3 +371,17 @@ button img {
   font-family: "Open Sans", sans-serif;
   margin: 2rem 0;
 }
+
+#body-bot{
+  margin-top: 1em;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+#body-bot > p{
+  font-size: small;
+  text-align: center;
+  color: #fff
+}

@@ -47,7 +47,15 @@ async function initItems() {
           <img src="${item.livro_url_capa}" alt="${item.livro_titulo}">
           <div class="txt3">
               <p>${item.livro_titulo}</p>
-              <h2>Caracteristicas do produto</h2>
+              <div id="body-bot">
+                <p id="editora">Editora ${item.livro_editora}</p>
+                <p id="edicao">${item.livro_edicao}° edição</p>
+                <p id="total-paginas">${item.livro_total_paginas} páginas</p>
+                <p id="tipo-capa">Capa ${item.livro_tipo_de_capa}</p>
+                <p id="genero">${item.livro_genero}</p>
+                <p id="idioma">${item.livro_idioma}</p>
+                <p id="ano-publicacao">${item.livro_ano_publicacao}</p>
+            </div>
           </div>
       </div>
       <div class="unidadeLivro">
