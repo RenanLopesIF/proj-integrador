@@ -16,6 +16,7 @@
 <body>
     <?php
     echo $this->include('cabecalho');
+    echo $this->include('toast');
     ?>
     <div class="container">
         <!-- <header class="cabeca">cabeçalho</header> -->

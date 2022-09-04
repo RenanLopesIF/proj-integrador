@@ -37,4 +37,18 @@ class Carrinho extends BaseController
         $id_usuario = $session->get("id");
         return $this->response->setJSON($carrinhoModel->getAll($id_usuario));
     }
+
+    public function removeItem($item_id)
+    {
+        $session = session();
+        if ($session->get('email') == null) {
+            return redirect('/');
+        };
+
+        $carrinhoModel = new \App\Models\LivrosCarrinhoModel();
+
+        $carrinhoModel->delete($item_id);
+
+        return redirect('carrinho');
+    }
 }

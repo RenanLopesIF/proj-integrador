@@ -13,7 +13,7 @@ const valorFrete = document.querySelector("#valorFrete");
 const valorDesconto = document.querySelector("#valorDesconto");
 
 const baseURL = document.URL.split("/public/")[0] + "/public";
-const urlCartItems = baseURL + "/carrinhos/items";
+const urlCartItems = baseURL + "/carrinho/items";
 
 async function initItems() {
   const cartItems = await fetch(urlCartItems, {
@@ -64,7 +64,7 @@ async function initItems() {
           </div>
           <p>0 dias</p>
           <p>$${itemPrice.toFixed(2)}</p>
-          <a href="#">
+          <a href="${baseURL}/carrinho/remover/${item.livroCarrinho_id}">
             <button><img src="${baseURL}/carrinho/img/delete_forever_FILL0_wght400_GRAD0_opsz48.svg""></button>
           </a>
       </div>

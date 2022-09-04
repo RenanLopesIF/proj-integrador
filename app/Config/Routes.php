@@ -50,7 +50,8 @@ $routes->post('/cadastrar/livro/inserir', 'CadastroLivro::inserir');
 $routes->post('/carrinho/inserir', 'Carrinho::insertItem');
 
 $routes->get('/livros', 'Home::livros');
-$routes->get('/carrinhos/items', 'Carrinho::getItems');
+$routes->get('/carrinho/items', 'Carrinho::getItems');
+$routes->get('/carrinho/remover/(:num)', 'Carrinho::removeItem/$1');
 
 
 /*
