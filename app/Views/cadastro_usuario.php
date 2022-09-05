@@ -14,7 +14,6 @@
 <body>
     <div class="container">
         <?php
-        echo $this->include('cabecalho');
         echo $this->include('toast');
         ?>
         <div class="form-image">

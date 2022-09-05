@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use App\Controllers\Pagamento;
+
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
@@ -42,6 +44,7 @@ $routes->get('/cadastrar/livro', 'CadastroLivro::index');
 $routes->get('/home', 'Home::index');
 $routes->get('/carrinho', 'Carrinho::index');
 $routes->get('/logout', 'AuthController::logout');
+$routes->get('/pagamento', "Pagamento::index");
 
 $routes->post('/autenticar', 'AuthController::login');
 $routes->post('/cadastrar/usuario/inserir', 'CadastroUsuario::inserir');

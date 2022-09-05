@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pagamento</title>
-    <link rel="stylesheet" href="<?base_url("/tela_de_pagamento/css/style.css")?>">
-    <link rel="stylesheet" href="<?base_url("/tela_de_pagamento/css/pagamento.css")?>">
+    <link rel="stylesheet" href="<?= base_url("/pagamento/css/style.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("/pagamento/css/pagamento.css") ?>">
 </head>
+
 <body>
+    <?php
+    echo $this->include('cabecalho');
+    echo $this->include('toast');
+    ?>
     <header id="header">
         <div class="metodo">
             <h1>Metodo de pagamento:</h1>
@@ -31,7 +37,7 @@
                     <label for="dataExpedicao">Data de expedição:</label>
                     <div class="mes">
                         <select name="mes" id="mes">
-                            <option class="cor" value="1"  selected>01</option>
+                            <option class="cor" value="1" selected>01</option>
                             <option class="cor" value="2">02</option>
                             <option class="cor" value="3">03</option>
                             <option class="cor" value="4">04</option>
@@ -81,13 +87,14 @@
             </div>
             <p id="errorCpf"></p>
             <div class="total-pagar" disabled>
-                <button type="submit" id="gerarBoleto" class="gerarBoleto" >
-                    <a id="baixarBoleto" href="./boleto.pdf" download="boleto">baixar boleto</a>
+                <button type="submit" id="gerarBoleto" class="gerarBoleto">
+                    <a id="baixarBoleto" href="<?= base_url("/pagamento/boleto.pdf") ?>" download="boleto">baixar boleto</a>
                 </button>
                 <p id="valorBoleto">Total: R$ 100,00</p>
             </div>
         </form>
     </header>
-    <script src="<?base_url("tela_de_pagamento/js/main.js")?>"></script>
+    <script src="<?= base_url("/pagamento/js/main.js") ?>"></script>
 </body>
+
 </html>
