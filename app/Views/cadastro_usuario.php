@@ -116,7 +116,7 @@
                     </div>
 
                     <div class="gender">
-                        <input type="radio" id="others" value="UNK" name="gender">
+                        <input type="radio" id="others" value="IND" name="gender">
                         <label>Outro</label>
                     </div>
                 </div>

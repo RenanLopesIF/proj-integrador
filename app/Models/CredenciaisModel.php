@@ -14,7 +14,7 @@ class CredenciaisModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['senha', 'id_usuario'];
+    protected $allowedFields = ['username', 'senha', 'id_usuario'];
 
     protected $useTimestamps = false;
     protected $updatedField  = 'updated_at';
