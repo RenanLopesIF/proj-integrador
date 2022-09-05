@@ -35,7 +35,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => '',
+        'database' => 'ordered_rework_proj_integ',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
