@@ -27,7 +27,7 @@ class LivrosCarrinhoModel extends Model
         $db = \Config\Database::connect();
         try {
             $db->transBegin();
-            $db->query("INSERT INTO livros_carrinho VALUES(default, :id_livro:, (select id from carrinhos c where id_usuario = :id_usuario:), :qtd:, false)", [
+            $db->query("INSERT INTO livros_carrinho VALUES(default, :id_livro:, (select id from carrinhos c where id_usuario = :id_usuario:), :qtd:, default)", [
                 "id_livro" => $id_livro,
                 "id_usuario" => $id_usuario,
                 "qtd" => $qtd
