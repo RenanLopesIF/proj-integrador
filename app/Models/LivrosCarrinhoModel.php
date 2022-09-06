@@ -14,7 +14,7 @@ class LivrosCarrinhoModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['id_livro', 'id_carrinho', 'qtd', 'confirmado'];
+    protected $allowedFields = ['id_livro', 'id_carrinho', 'qtd', 'fechado'];
 
     protected $useTimestamps = false;
 
@@ -27,7 +27,7 @@ class LivrosCarrinhoModel extends Model
         $db = \Config\Database::connect();
         try {
             $db->transBegin();
-            $db->query("INSERT INTO livros_carrinho VALUES(default, :id_livro:, (select id from carrinhos c where id_usuario = :id_usuario:), :qtd:, default)", [
+            $db->query("INSERT INTO livros_carrinho VALUES(default, :id_livro:, (select id from carrinhos c where id_usuario = :id_usuario:), :qtd:, false)", [
                 "id_livro" => $id_livro,
                 "id_usuario" => $id_usuario,
                 "qtd" => $qtd
