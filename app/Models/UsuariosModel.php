@@ -72,7 +72,7 @@ class UsuariosModel extends Model
                 return true;
             }
         } catch (\Throwable $th) {
-            return false;
+            return $th;
         }
     }
 
