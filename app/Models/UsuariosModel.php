@@ -63,7 +63,6 @@ class UsuariosModel extends Model
                 "senha" => $dados["password"]
             ];
             $credenciaisModel->insert($credenciaisDados);
-            $carrinhosModel->insert(["id_usuario" => $idUsuario]);
 
             if ($db->transStatus() === false) {
                 $db->transRollback();
