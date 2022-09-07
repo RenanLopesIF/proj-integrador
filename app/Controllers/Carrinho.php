@@ -21,7 +21,7 @@ class Carrinho extends BaseController
             return redirect('/');
         };
 
-        $carrinhoModel = new \App\Models\LivrosCarrinhoModel();
+        $carrinhoModel = new \App\Models\CarrinhosModel();
         $id_usuario = $session->get("id");
         $id_livro = $_POST['id_livro'];
         $qtd = $_POST["qtd"];
@@ -45,9 +45,9 @@ class Carrinho extends BaseController
             return redirect('/');
         };
 
-        $carrinhoModel = new \App\Models\LivrosCarrinhoModel();
+        $carrinhoModel = new \App\Models\CarrinhosModel();
 
-        $carrinhoModel->delete($item_id);
+        $carrinhoModel->removeItem($session->get('id'), $item_id);
 
         return redirect('carrinho');
     }

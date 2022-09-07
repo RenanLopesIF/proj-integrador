@@ -29,7 +29,6 @@ class UsuariosModel extends Model
         $db = \Config\Database::connect();
         $enderecoModel = new \App\Models\EnderecosModel();
         $credenciaisModel = new \App\Models\CredenciaisModel();
-        $carrinhosModel = new \App\Models\CarrinhosModel();
 
         try {
             $db->transBegin();
