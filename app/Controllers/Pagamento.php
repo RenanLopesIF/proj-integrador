@@ -11,10 +11,13 @@ class Pagamento extends BaseController
             return redirect('/');
         }
 
-        return view('pagamento');
+        $carrinhosModel = new \App\Models\CarrinhosModel();
+        $dados = $carrinhosModel->getTotalPrice($session->get('id'));
+
+        return view('pagamento', $dados[0]);
     }
 
-    public function confirmaPagamento()
+    public function confirmaPagamento($metodo)
     {
         $session = session();
         if ($session->get('email') == null) {
@@ -24,16 +27,24 @@ class Pagamento extends BaseController
         $comprasModel = new \App\Models\ComprasModel();
         $dueDate = time() + (6 * 24 * 60 * 60);
         $status = 'pendente';
-        if ($_POST['forma_pgt'] == 1) $status = 'pago';
+        $forma_pgt_map = [
+            'credito' => 1,
+            'boleto' => 2
+        ];
+
+        if ($metodo == 'credito') {
+            $status = 'pago';
+        };
 
         $res = $comprasModel->finalizarCompra([
             'id_usuario' => $session->get('id'),
-            'forma_pgt' => $_POST['forma_pgt'],
+            'forma_pgt' => $forma_pgt_map[$metodo],
             'parcelas' => $_POST['parcelas'],
             'vencimento' => date('Y-m-d', $dueDate),
             'status' => $status
         ]);
 
-        return redirect('carrinho');
+        if ($res) return redirect('carrinho');
+        return redirect('pagamento');
     }
 }

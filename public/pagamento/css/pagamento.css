@@ -107,7 +107,7 @@ a {
     border-radius: .6rem;
 }
 
-.data {
+.data, #parcelas-label {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -115,17 +115,17 @@ a {
     font-family: 'Open Sans', sans-serif;
 }
 
-.data label {
+.data label, #parcelas-label {
     font-size: 1.7rem;
     color: var(--color-amarelo-400);
     margin: 1.2rem 1rem 0 0;
 }
 
-.data select {
+.data select, #parcelas-label {
     font-size: 1.8rem;
     width: 100%;
 }
-#mes{
+#mes, #parcelas{
     border: none;
     background-color: transparent;
     border: 1px solid var(--color-cinza-500);
@@ -143,11 +143,12 @@ a {
     cursor: pointer;
     color: var(--color-amarelo-400);
 }
-select#mes  option.cor{
+select#mes  option.cor, select#ano option.cor, select#parcelas option.cor{
     background-color: var(--color-cinza-500);
 }
-select#ano option.cor{
-    background-color: var(--color-cinza-500);
+
+#parcelas-label{
+    margin-bottom: 0.6rem;
 }
 
 .cartao-credito label:nth-child(2) {
@@ -156,7 +157,8 @@ select#ano option.cor{
 }
 
 .mes,
-.ano {
+.ano,
+.parcelas {
     margin-top: 1.2rem;
 }
 
@@ -190,8 +192,12 @@ select#ano option.cor{
     border: 1px solid var(--color-cinza-500);
 }
 
-#form button:hover {
+#form button:hover, #form-1 button:hover{
     border: 3px solid var(--color-amarelo-500);
+}
+
+.formInput{
+    color: #fff
 }
 
 .gerarBoleto {
@@ -257,6 +263,7 @@ input[type=number] {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 1.2rem;
 }
 
 .total-credito p,
