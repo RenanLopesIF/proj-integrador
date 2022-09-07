@@ -3,8 +3,8 @@ const form = document.querySelector('#form');
 const imgIcon = document.querySelector('#olho');
 const inputPassword = document.querySelector('#password');
 const containerInImgIcon = document.querySelector('.on-off');
-const olhoAberto = "<?=base_url('/recuperar_senha/img/visible.png')?>";
-const olhoFechado = "<?=base_url('/recuperar_senha/img/offvisible.png')?>";
+const olhoAberto = "./recuperar_senha/img/visible.png";
+const olhoFechado = "./recuperar_senha/img/offvisible.png";
 
 imgIcon.style.cursor = 'pointer';
 
