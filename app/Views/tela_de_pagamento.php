@@ -82,7 +82,7 @@
             <p id="errorCpf"></p>
             <div class="total-pagar" disabled>
                 <button type="submit" id="gerarBoleto" class="gerarBoleto" >
-                    <a id="baixarBoleto" href="./boleto.pdf" download="boleto">baixar boleto</a>
+                    <a id="baixarBoleto" href="<?=base_url("/tela_de_pagamento/boleto.pdf")?>" download="boleto">baixar boleto</a>
                 </button>
                 <p id="valorBoleto">Total: R$ 100,00</p>
             </div>
