@@ -34,7 +34,7 @@
                 <label for="cvv">Código de segurança (CVV):</label>
                 <input type="number" name="cvv" id="cvv" placeholder="Somente 3 números" required>
                 <div class="data">
-                    <label for="dataExpedicao">Data de expedição:</label>
+                    <label for="validade">Validade:</label>
                     <div class="mes">
                         <select name="mes" id="mes">
                             <option class="cor" value="1" selected>01</option>
@@ -49,7 +49,9 @@
                         <select name="ano" id="ano">
                             <option class="cor" value="2022" selected>2022</option>
                             <?php
-                            for ($i = 2023; $i <= 2034; $i++) {
+                            $currentYear = intval(date('Y', time()));
+                            $maxYear = $currentYear + 12;
+                            for ($i = $currentYear; $i <= $maxYear; $i++) {
                                 echo "<option class='cor' value='$i'>$i</option>";
                             }
                             ?>
