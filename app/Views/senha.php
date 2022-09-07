@@ -20,13 +20,13 @@
                 </div>
                 <label id="labelSenha" for="senha">Seu nova senha:</label>
                 <div class="on-off">
-                    <input id="password" type="password" name="password" placeholder="Password" required><img id="olho" src="./recuperar_senha/img/visible.png" alt="icone do olho aberto"></input>
+                    <input id="password" type="password" name="password" placeholder="Password" required><img id="olho" src="<?=base_url("/recuperar_senha/img/visible.png")?>" alt="icone do olho aberto"></input>
                     
                 </div>
             </div>
             <button id="enviandoSenha" type="submit" class="btn btn-warning bttwo">Atualizar</button>
         </form>
     </header>
-    <script src="./recuperar_senha/js/tentando.js"></script>
+    <script src="<?=base_url("/recuperar_senha/js/tentando.js")?>"></script>
 </body>
 </html>
