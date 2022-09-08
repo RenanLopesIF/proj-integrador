@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pagamento</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/pagamento.css">
+    <link rel="stylesheet" href="<?= base_url("/pagamento/css/style.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("/pagamento/css/pagamento.css") ?>">
 </head>
+
 <body>
+    <?php
+    echo $this->include('cabecalho');
+    echo $this->include('toast');
+    ?>
     <header id="header">
         <div class="metodo">
             <h1>Metodo de pagamento:</h1>
@@ -28,37 +34,27 @@
                 <label for="cvv">Código de segurança (CVV):</label>
                 <input type="number" name="cvv" id="cvv" placeholder="Somente 3 números" required>
                 <div class="data">
-                    <label for="dataExpedicao">Data de expedição:</label>
+                    <label for="validade">Validade:</label>
                     <div class="mes">
                         <select name="mes" id="mes">
-                            <option class="cor" value="1"  selected>01</option>
-                            <option class="cor" value="2">02</option>
-                            <option class="cor" value="3">03</option>
-                            <option class="cor" value="4">04</option>
-                            <option class="cor" value="5">05</option>
-                            <option class="cor" value="6">06</option>
-                            <option class="cor" value="7">07</option>
-                            <option class="cor" value="8">08</option>
-                            <option class="cor" value="9">09</option>
-                            <option class="cor" value="10">10</option>
-                            <option class="cor" value="11">11</option>
-                            <option class="cor" value="12">12</option>
+                            <option class="cor" value="1" selected>01</option>
+                            <?php
+                            for ($i = 1; $i <= 12; $i++) {
+                                echo "<option class='cor' value='$i'>$i</option>";
+                            }
+                            ?>
                         </select>
                     </div>
                     <div class="ano">
                         <select name="ano" id="ano">
                             <option class="cor" value="2022" selected>2022</option>
-                            <option class="cor" value="2023">2023</option>
-                            <option class="cor" value="2024">2024</option>
-                            <option class="cor" value="2025">2025</option>
-                            <option class="cor" value="2026">2026</option>
-                            <option class="cor" value="2027">2027</option>
-                            <option class="cor" value="2028">2028</option>
-                            <option class="cor" value="2029">2029</option>
-                            <option class="cor" value="2030">2030</option>
-                            <option class="cor" value="2032">2032</option>
-                            <option class="cor" value="2033">2033</option>
-                            <option class="cor" value="2034">2034</option>
+                            <?php
+                            $currentYear = intval(date('Y', time()));
+                            $maxYear = $currentYear + 12;
+                            for ($i = $currentYear; $i <= $maxYear; $i++) {
+                                echo "<option class='cor' value='$i'>$i</option>";
+                            }
+                            ?>
                         </select>
                     </div>
                 </div>
@@ -72,7 +68,7 @@
             <div class="desativado-boleto boleto-1">
                 <div class="name-text">
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" placeholder="Digite seu nome">
+                    <input type="text" id="nome" placeholder="Digite seu nome" required>
                 </div>
                 <div class="cpf-text">
                     <label for="cpf">CPF:</label>
@@ -81,13 +77,14 @@
             </div>
             <p id="errorCpf"></p>
             <div class="total-pagar" disabled>
-                <button type="submit" id="gerarBoleto" class="gerarBoleto" required>
-                    <a id="baixarBoleto" href="./boleto.pdf" download="boleto">baixar boleto</a>
+                <button type="submit" id="gerarBoleto" class="gerarBoleto">
+                    <a id="baixarBoleto" href="<?= base_url("/pagamento/boleto.pdf") ?>" download="boleto">baixar boleto</a>
                 </button>
                 <p id="valorBoleto">Total: R$ 100,00</p>
             </div>
         </form>
     </header>
-    <script src="./assets/js/main.js"></script>
+    <script src="<?= base_url("/pagamento/js/main.js") ?>"></script>
 </body>
+
 </html>
