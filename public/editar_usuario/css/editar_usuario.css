@@ -4,15 +4,20 @@
   box-sizing: border-box;
   font-size: 13px;
 }
-
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   font-family: "Montserrat", sans-serif;
+  background-color: var(--color-beje-600);
 }
+input:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
 
 h1{
   color: var( --color-amarelo-400);
@@ -20,14 +25,16 @@ h1{
 
 .container {
   display: grid;
-  grid-template-columns: 0.45fr 0.55fr;
+  grid-template-columns: 0.9fr;
+  justify-content: center;
+  /* grid-template-columns: 0.45fr 0.55fr; */
 }
 .form-image {
   display: flex;
   width: 50%;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-cinza-300);
+  background-color: var(--color-amarelo-400);
   padding: 1rem;
 }
 
@@ -42,7 +49,7 @@ h1{
 }
 
 #form {
-  padding: 40px 0 10px 10px;
+  padding: 0px 0 10px 10px;
 }
 
 .form-header {
@@ -57,6 +64,7 @@ h1{
   justify-content: space-between;
   padding: 0.5rem 0;
 }
+
 .data-field {
   display: flex;
   flex-direction: column;
@@ -67,7 +75,8 @@ h1{
   padding: 0.8rem 1.2rem;
   border: none;
   border-radius: 10px;
-  box-shadow: 1px 1px 6px #0808082d;
+  /* box-shadow: 1px 1px 6px #0808082d; */
+  background-color: var(--color-amarelo-200);
 }
 .data-field input:hover {
   background-color: var(--color-amarelo-300);
@@ -85,20 +94,20 @@ h1{
 .data-field input::placeholder {
   color: var(--color-beje-600);
 }
-.gender-group {
+
+.sex-group {
   display: flex;
   justify-content: space-around;
-  margin-top: 0.4rem;
-  padding: 0 60% 0 0;
-}
-.gender-input {
-  display: flex;
+  flex-direction: row;
   align-items: center;
+  width: 25%;
+  /* background-color: red; */
 }
-.gender-input input {
+
+.sex-group input {
   margin-right: 0.35rem;
 }
-.gender-input label {
+.sex-group label {
   font-size: 0.81rem;
   font-weight: 600;
   color: var(--color-beje-400);
@@ -106,17 +115,20 @@ h1{
 .registration-button {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 .registration-button button {
-  margin-top: 2.5rem;
-  margin: 2rem 4rem 0 0;
+  margin-top: 9rem;
+  /* margin: 2rem 4rem 0 0; */
   border: none;
   background-color: var(--color-amarelo-400);
   color: white;
   padding: 0.62rem;
   border-radius: 5px;
   cursor: pointer;
+  width: 30%;
 }
 .registration-button button:hover {
   color: white;
@@ -124,12 +136,7 @@ h1{
 .bttwo:hover {
   color: white;
 }
-.registration-button button a {
-  text-decoration: none;
-  font-size: 0.93rem;
-  font-weight: 500;
-  color: white;
-}
+
 @media screen and (max-width: 1330px) {
   .form-image {
     display: none;
@@ -153,7 +160,7 @@ h1{
   .gender-input {
     margin-top: 2rem;
   }
-  .gender-group {
+  .sex-group {
     flex-direction: column;
   }
   .gender-input {
