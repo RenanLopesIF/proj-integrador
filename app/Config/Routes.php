@@ -47,6 +47,9 @@ $routes->get('/logout', 'AuthController::logout');
 $routes->get('/pagamento', "Pagamento::index");
 $routes->get('/recuperarsenha', "RecuperarSenha::index");
 $routes->get('/recuperarsenha/novasenha/(:num)', "RecuperarSenha::novaSenha");
+$routes->get('/manusearlivros', "ManusearLivros::index");
+$routes->get('/editar/livro/(:num)', "Editar::livro/$1");
+$routes->get('/editar/usuario/(:num)', "Editar::usuario/$1");
 
 $routes->post('/autenticar', 'AuthController::login');
 $routes->post('/cadastrar/usuario/inserir', 'CadastroUsuario::inserir');

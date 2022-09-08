@@ -1,0 +1,144 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--color-cinza-700);
+  margin: 0;
+}
+
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+p, li, a{
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, p{
+  text-align: center;
+  color: var(--color-amarelo-400);
+  /* font-family: 'Kdam Thmor Pro', sans-serif; */
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 25px;
+}
+
+.image-holder {
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  width: 201px;
+  height: 400px;
+}
+
+.text {
+  display: grid;
+  grid-template-columns: 100px 100px;
+}
+
+.text h2,
+.text p {
+  text-align: left;
+  margin: 0;
+}
+.text p {
+  font-size: 15px;
+}
+
+.text h2 {
+  margin-top: 6px;
+  font-size: 16px;
+  color: var(--color-amarelo-100);
+}
+
+.image-holder:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.info {
+  display: grid;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  cursor: pointer;
+}
+.info ul div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-right: 30px;
+  padding-top: 10px;
+}
+.info ul {
+  display: flex;
+  padding-left: 0;
+  justify-content: center;
+  align-items: center;
+}
+.info li {
+  list-style: none;
+  width: 100%;
+  color: black;
+}
+
+.info button {
+  background-color: var(--color-cinza-400);
+  border: none;
+  margin-bottom: 20px;
+}
+.info button:hover {
+  background-color: var(--color-cinza-500);
+}
+.gallery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  margin-top: 40px;
+}
+div.desc {
+  text-align: center;
+  width: 100%;
+}
+
+.desc i {
+  float: left !important;
+  padding-left: 10px;
+}
+
+.desc button {
+  float: right !important;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.gallery img {
+  height: 250px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.image-box {
+  height: 250px;
+  width: 200px;
+  background-color: var(--color-cinza-200);
+}
+
+
+#txtQtd {
+  color: rgb(177, 0, 0);
+}
+#qtd-items {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  border-radius: 5px;
+  width: 80px;
+  padding: 1px 8px;
+  border: 1px solid var(--color-cinza-400);
+  margin-left: 3px;
+}
+

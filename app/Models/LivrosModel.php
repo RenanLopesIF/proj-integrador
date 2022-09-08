@@ -38,6 +38,17 @@ class LivrosModel extends Model
     protected $validationMessages = [];
     protected $skipValidation     = false;
 
+    public function getOne($id_livro)
+    {
+        $db = \Config\Database::connect();
+
+        $query = "select * from livros l
+        inner join estoque_livros el on el.cod = l.cod_lote
+         where l.id = :id_livro:";
+
+        return $db->query($query, ["id_livro" => $id_livro])->getResultArray();
+    }
+
     public function getAll()
     {
         $db = \Config\Database::connect();
