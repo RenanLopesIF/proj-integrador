@@ -71,7 +71,7 @@ class UsuariosModel extends Model
                 return true;
             }
         } catch (\Throwable $th) {
-            return $th;
+            return false;
         }
     }
 
