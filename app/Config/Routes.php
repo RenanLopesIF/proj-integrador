@@ -45,6 +45,8 @@ $routes->get('/home', 'Home::index');
 $routes->get('/carrinho', 'Carrinho::index');
 $routes->get('/logout', 'AuthController::logout');
 $routes->get('/pagamento', "Pagamento::index");
+$routes->get('/recuperarsenha', "RecuperarSenha::index");
+$routes->get('/recuperarsenha/novasenha/(:num)', "RecuperarSenha::novaSenha");
 
 $routes->post('/autenticar', 'AuthController::login');
 $routes->post('/cadastrar/usuario/inserir', 'CadastroUsuario::inserir');
@@ -52,6 +54,7 @@ $routes->post('/cadastrar/lote/inserir', 'CadastroLote::inserir');
 $routes->post('/cadastrar/livro/inserir', 'CadastroLivro::inserir');
 $routes->post('/carrinho/inserir', 'Carrinho::insertItem');
 $routes->post('/pagamento/confirmar/(:alpha)', 'Pagamento::confirmaPagamento/$1');
+$routes->post('/recuperarsenha/(:num)', 'RecuperarSenha::atualizaSenha/$1');
 
 $routes->get('/livros', 'Home::livros');
 $routes->get('/carrinho/items', 'Carrinho::getItems');
