@@ -6,8 +6,11 @@
     <nav class="navbar">
         <ul class="menu">
             <li><a href="<?= base_url('/index.php/home') ?>">Home</a></li>
-            <li><a href="<?= base_url('/index.php/cadastrar/lote') ?>">Cadastrar lote</a></li>
-            <li><a href="<?= base_url('/index.php/cadastrar/livro') ?>">Cadastrar livro</a></li>
+            <?php
+            if (session('id_tipo_de_usuario') == 2) {
+                echo "<li><a href=" . base_url('/index.php/manusearlivros') . ">Manusear Livros</a></li>";
+            }
+            ?>
         </ul>
     </nav>
     <a href="<?= base_url('/index.php/carrinho') ?>">

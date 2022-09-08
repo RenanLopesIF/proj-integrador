@@ -27,7 +27,15 @@
     </div>
 
     <div class="section-2">
-        <h2>Selecione para editar</h2>
+        <div id="section-2-header">
+            <div>
+                <a href="<?= base_url('/index.php/cadastrar/lote') ?>"><button class="btn btn-warning bttwo">Cadastrar lote</button></a>
+                <a href="<?= base_url('/index.php/cadastrar/livro') ?>"><button class="btn btn-warning bttwo">Cadastrar livro</button></a>
+            </div>
+            <h4 id="text-ou">ou</h4>
+            <h2>Selecione para editar</h2>
+        </div>
+
         <div id="gallery" class="gallery"></div>
     </div>
 
