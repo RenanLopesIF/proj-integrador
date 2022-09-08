@@ -17,6 +17,12 @@ input:disabled {
   cursor: not-allowed;
   opacity: 0.4;
 }
+
+
+h1{
+  color: var( --color-amarelo-400);
+}
+
 .container {
   display: grid;
   grid-template-columns: 0.9fr;

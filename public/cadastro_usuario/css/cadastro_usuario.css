@@ -13,6 +13,11 @@ body {
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
 }
+
+h1{
+  color: var( --color-amarelo-400);
+}
+
 .container {
   display: grid;
   grid-template-columns: 0.45fr 0.55fr;
