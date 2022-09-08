@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pagamento</title>
-    <link rel="stylesheet" href="<?= base_url("/pagamento/css/style.css") ?>">
+    <link rel="stylesheet" href="<?= base_url("/style.css") ?>">
     <link rel="stylesheet" href="<?= base_url("/pagamento/css/pagamento.css") ?>">
 </head>
 
