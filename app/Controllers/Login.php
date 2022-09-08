@@ -11,7 +11,6 @@ class Login extends BaseController
             return redirect('home');
         }
 
-        // return view('login');
-        return view('email'); // depois tirar, coloquei para testar
+        return view('login');
     }
 }
