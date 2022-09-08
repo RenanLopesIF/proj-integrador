@@ -12,6 +12,5 @@ class Login extends BaseController
         }
 
         return view('login');
-        // return view('vitrine'); // depois tirar, coloquei para testar
     }
 }
