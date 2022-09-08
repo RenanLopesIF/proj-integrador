@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class CarrinhosModel extends Model
+class CarrinhosModel extends LivrosCarrinhoModel
 {
     protected $table      = 'carrinhos';
     protected $primaryKey = 'id';
@@ -26,7 +26,6 @@ class CarrinhosModel extends Model
     {
         $db = \Config\Database::connect();
         $query = 'select 
-                lc.id as "livroCarrinho_id",
                 lc.qtd as "livroCarrinho_qtd",
                 l.id as "livro_id",
                 l.titulo as "livro_titulo",

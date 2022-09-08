@@ -34,18 +34,6 @@
     --color-beje-900: #181000;
 }
 
-/* body{
-    font-family: 'Montserrat', sans-serif;
-    background-color: var( --color-cinza-900);
-} */
-/* ul{
-    list-style: none;
-    padding: 0;
-    font-weight: 500;
-}
-a{
-    text-decoration: none;
-} */
 h1{
     color: var( --color-amarelo-400);
 }
