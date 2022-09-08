@@ -14,10 +14,10 @@ class UsuariosModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['id_endereco', 'id_tipo_de_usuario', 'nome', 'cpf', 'email', 'telefone', 'data_nascimento'];
+    protected $allowedFields = ['id_endereco', 'id_tipo_de_usuario', 'nome', 'cpf', 'email', 'telefone', 'data_nascimento', 'sexo'];
 
     protected $useTimestamps = false;
-    protected $createdField  = 'created_at';
+    protected $createdField  = 'create_at';
     protected $updatedField  = 'updated_at';
 
     protected $validationRules    = [];
@@ -29,7 +29,6 @@ class UsuariosModel extends Model
         $db = \Config\Database::connect();
         $enderecoModel = new \App\Models\EnderecosModel();
         $credenciaisModel = new \App\Models\CredenciaisModel();
-        $carrinhosModel = new \App\Models\CarrinhosModel();
 
         try {
             $db->transBegin();
@@ -63,7 +62,6 @@ class UsuariosModel extends Model
                 "senha" => $dados["password"]
             ];
             $credenciaisModel->insert($credenciaisDados);
-            $carrinhosModel->insert(["id_usuario" => $idUsuario]);
 
             if ($db->transStatus() === false) {
                 $db->transRollback();

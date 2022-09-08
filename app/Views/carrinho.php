@@ -67,7 +67,9 @@
                             <p>Valor total</p>
                             <p id="valorTotalPedido"></p>
                         </div>
-                        <button id='btnFinalizarPedido' type="submit">Finalizar</button>
+                        <a href="<?= base_url('/index.php/pagamento') ?>">
+                            <button id='btnFinalizarPedido' type="submit">Finalizar</button>
+                        </a>
                     </div>
                 </div>
             </div>
