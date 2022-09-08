@@ -17,7 +17,7 @@ class UsuariosModel extends Model
     protected $allowedFields = ['id_endereco', 'id_tipo_de_usuario', 'nome', 'cpf', 'email', 'telefone', 'data_nascimento', 'sexo'];
 
     protected $useTimestamps = false;
-    protected $createdField  = 'create_at';
+    protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
 
     protected $validationRules    = [];
