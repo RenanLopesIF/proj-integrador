@@ -1,33 +1,20 @@
-const sendPassword = document.querySelector('#sendPassword');
-const form = document.querySelector('#form');
-const imgIcon = document.querySelector('#olho');
-const inputPassword = document.querySelector('#password');
-const containerInImgIcon = document.querySelector('.on-off');
-const olhoAberto = "./recuperar_senha/img/visible.png";
-const olhoFechado = "./recuperar_senha/img/offvisible.png";
+const baseURL = document.URL.split("/public/")[0] + "/public";
 
-imgIcon.style.cursor = 'pointer';
+const imgIcon = document.querySelector("#olho");
+const inputPassword = document.querySelector("#password");
+const containerInImgIcon = document.querySelector(".on-off");
+const olhoAberto = baseURL + "/recuperar_senha/img/visible.png";
+const olhoFechado = baseURL + "/recuperar_senha/img/offvisible.png";
 
-function activateNewPassword() {
-    sendPassword.style.display = 'block';
-    sendPassword.style.opacity = '1';
-    setTimeout(()=>{
-        sendPassword.style.display = 'none';
-    }, 2000);
-}
+imgIcon.style.cursor = "pointer";
 
-form.onsubmit = function(form) {
-    form.preventDefault();
-    activateNewPassword();
-}
-
-imgIcon.addEventListener('click', ()=>{
-    containerInImgIcon.classList.toggle('visivel');
-    if(containerInImgIcon.classList.contains('visivel')) {
-        imgIcon.src = olhoFechado;
-        inputPassword.type = "text";
-    } else {
-        imgIcon.src = olhoAberto;
-        inputPassword.type = "password";
-    }
-})
+imgIcon.addEventListener("click", () => {
+  containerInImgIcon.classList.toggle("visivel");
+  if (containerInImgIcon.classList.contains("visivel")) {
+    imgIcon.src = olhoFechado;
+    inputPassword.type = "text";
+  } else {
+    imgIcon.src = olhoAberto;
+    inputPassword.type = "password";
+  }
+});

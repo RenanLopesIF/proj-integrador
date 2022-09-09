@@ -14,17 +14,15 @@
 <body>
     <header id="header">
         <h1 class="titulo">Nova senha</h1>
-        <form action="" method="post" id="form">
+        <form action="<?= base_url("/recuperarsenha/alterarsenha") ?>" method="post" id="form">
             <div class="data-field">
-                <div id="sendPassword">
-                    Senha trocada com sucesso
-                </div>
                 <label id="labelSenha" for="senha">Seu nova senha:</label>
                 <div class="on-off">
                     <input id="password" type="password" name="password" placeholder="Password" required><img id="olho" src="<?= base_url("/recuperar_senha/img/visible.png") ?>" alt="icone do olho aberto"></input>
 
                 </div>
             </div>
+            <input type="hidden" name="id" value="<?= $id_usuario ?>">
             <button id="enviandoSenha" type="submit" class="btn btn-warning bttwo">Atualizar</button>
         </form>
     </header>

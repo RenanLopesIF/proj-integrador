@@ -13,8 +13,8 @@
 
 <body>
     <header id="header">
-        <h1 class="titulo">Recuperação de email</h1>
-        <form action="" method="post" id="form">
+        <h1 class="titulo">Email para recuperação</h1>
+        <form action="<?= base_url("/recuperarsenha/enviaremail") ?>" method="get" id="form">
             <div class="data-field">
                 <div id="sendEmail">
                     Email de recuperação enviado com sucesso
@@ -22,7 +22,7 @@
                 <label id="labelEmail" for="email">Seu email:</label>
                 <input id="email" type="email" name="email" placeholder="Email" required>
             </div>
-            <button id="enviandoEmail" type="submit" class="btn btn-warning bttwo">Atualizar</button>
+            <button id="enviandoEmail" type="submit" class="btn btn-warning bttwo">Enviar email</button>
         </form>
     </header>
     <script src="<?= base_url("/recuperar_senha/js/enviarEmail.js") ?>"></script>
