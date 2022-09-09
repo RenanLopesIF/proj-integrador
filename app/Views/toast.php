@@ -9,7 +9,7 @@ if (session()->getFlashdata('toast-msg') != null) {
 if (session()->getFlashdata('toast-msg') != null) {
     echo '<div style="position: fixed; top: 0; right: 0;">
                 <div aria-live="polite" aria-atomic="true" style="margin-top: 20px; position: relative; min-height: 200px;">
-                    <div class="toast hide" data-autohide="true" style="border-radius: 15px 0 0 15px;">
+                    <div id="dynamic-toast" class="toast hide" data-autohide="true" style="border-radius: 15px 0 0 15px;">
                         <div id="box-toast" style="background-color:' . session()->getFlashdata('toast-color') . ';border-radius: 15px 0 0 15px;min-height: 80px;" class="toast-body text-white">
                             <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
                             <p id="msg-toast">' . session()->getFlashdata('toast-msg') . '</p>
@@ -28,7 +28,7 @@ if (session()->getFlashdata('toast-msg') != null) {
         <script>
             window.onload = ()=>{
                 $(document).ready(function () {
-                    $(".toast").toast("show");
+                    $("#dynamic-toast").toast("show");
                 });
             }
         </script>';

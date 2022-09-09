@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UsuariosModel extends Model
+class UsuariosModel extends CredenciaisModel
 {
     protected $table      = 'usuarios';
     protected $primaryKey = 'id';
@@ -32,7 +32,19 @@ class UsuariosModel extends Model
         inner join enderecos e on e.id = u.id_endereco 
         where u.id = :id_usuario:;";
 
-        return $db->query($query, ['id_usuario' => $id_usuario]);
+        return $db->query($query, ['id_usuario' => $id_usuario])->getResultArray()[0];
+    }
+
+    public function getUser($username, $senha)
+    {
+        $db = \Config\Database::connect();
+        $query = "SELECT * FROM USUARIOS 
+        WHERE id = (SELECT id_usuario FROM CREDENCIAIS WHERE username = :username: AND senha = :senha: )";
+
+        return $db->query($query,  [
+            "username" => $username,
+            "senha" => $senha,
+        ])->getResultArray();
     }
 
     public function insertOne($dados)
@@ -86,15 +98,27 @@ class UsuariosModel extends Model
         }
     }
 
-    public function getUser($username, $senha)
+    public function updateOne($id_usuario, $dados)
     {
+        $enderecoModel = new \App\Models\EnderecosModel();
         $db = \Config\Database::connect();
-        $query = "SELECT * FROM USUARIOS 
-        WHERE id = (SELECT id_usuario FROM CREDENCIAIS WHERE username = :username: AND senha = :senha: )";
+        $id_endereco = $enderecoModel->getAllByUserID($id_usuario)['id'];
 
-        return $db->query($query,  [
-            "username" => $username,
-            "senha" => $senha,
-        ])->getResultArray();
+        try {
+            $db->transBegin();
+            $this->update($id_usuario, $dados['usuario']);
+            $res = $this->updatePasswordByUserID($id_usuario, $dados['new_password']);
+            $enderecoModel->update($id_endereco, $dados['endereco']);
+
+            if ($db->transStatus() === false || $res === false) {
+                $db->transRollback();
+                return false;
+            } else {
+                $db->transCommit();
+                return true;
+            }
+        } catch (\Throwable $th) {
+            return false;
+        }
     }
 }

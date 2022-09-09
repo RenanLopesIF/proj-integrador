@@ -21,4 +21,14 @@ class EnderecosModel extends Model
     protected $validationRules    = [];
     protected $validationMessages = [];
     protected $skipValidation     = false;
+
+    public function getAllByUserID($id_usuario)
+    {
+        $db = \Config\Database::connect();
+
+        $query = "select * from enderecos e
+        where e.id = (select id_endereco from usuarios u where u.id = :id_usuario:)";
+
+        return $db->query($query, ["id_usuario" => $id_usuario])->getResultArray()[0];
+    }
 }

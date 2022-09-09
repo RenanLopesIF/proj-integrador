@@ -10,7 +10,8 @@
             if (session('id_tipo_de_usuario') == 2) {
                 echo "<li><a href=" . base_url('/index.php/manusearlivros') . ">Manusear Livros</a></li>";
             }
-            echo "<li><a href=" . base_url('/index.php/editar/usuario') . ">Editar usuário</a></li>"
+            $editRoute = "/index.php/editar/usuario/" . session('id');
+            echo "<li><a href=" . base_url($editRoute) . ">Editar usuário</a></li>"
             ?>
 
         </ul>

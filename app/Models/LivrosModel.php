@@ -46,7 +46,7 @@ class LivrosModel extends Model
         inner join estoque_livros el on el.cod = l.cod_lote
          where l.id = :id_livro:";
 
-        return $db->query($query, ["id_livro" => $id_livro])->getResultArray();
+        return $db->query($query, ["id_livro" => $id_livro])->getResultArray()[0];
     }
 
     public function getAll()

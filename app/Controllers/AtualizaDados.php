@@ -30,7 +30,45 @@ class AtualizaDados extends BaseController
         };
 
         $usuarioModel = new \App\Models\UsuariosModel();
-        $usuario = $usuarioModel->find($id_usuario);
-        return view('editar_usuario', ["usuario" => $usuario]);
+
+        $usuarioDado = [
+            "nome" => $_POST['nome'],
+            "email" => $_POST['email'],
+            "telefone" => $_POST['telefone'],
+            "data_nascimento" => $_POST['nascimento'],
+        ];
+
+        $enderecoDado = [
+            "pais" => $_POST['pais'],
+            "estado" => $_POST['estado'],
+            "cidade" => $_POST['cidade'],
+            "bairro" => $_POST['bairro'],
+            "rua" => $_POST['rua'],
+            "numero" => $_POST['numero'],
+            "cep" => $_POST['cep'],
+        ];
+
+        $res = $usuarioModel->updateOne($id_usuario, [
+            "usuario" => $usuarioDado,
+            "endereco" => $enderecoDado,
+            "new_password" => $_POST['password']
+        ]);
+
+        $flashDataSuccess = [
+            'toast-color' => "#66cf66",
+            'toast-msg' => "Dados atualizado com sucesso.",
+        ];
+        $flashDataError = [
+            'toast-color' => "#ff6262",
+            'toast-msg' => "Falha ao tentar atualizar dados.",
+            'toast-msg-secondary' => "Verifique-os e tente novamente!"
+        ];
+
+        if ($res) {
+            $session->setFlashdata($flashDataSuccess);
+        } else {
+            $session->setFlashdata($flashDataError);
+        };
+        return redirect("home");
     }
 }

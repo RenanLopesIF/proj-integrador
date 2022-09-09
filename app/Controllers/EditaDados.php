@@ -12,7 +12,7 @@ class EditaDados extends BaseController
         };
 
         $livrosModel = new \App\Models\LivrosModel();
-        $livro = $livrosModel->getOne($id_livro)[0];
+        $livro = $livrosModel->getOne($id_livro);
         return view('editar_livro', ["livro" => $livro]);
     }
 
