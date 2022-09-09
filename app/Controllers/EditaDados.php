@@ -2,10 +2,15 @@
 
 namespace App\Controllers;
 
-class Editar extends BaseController
+class EditaDados extends BaseController
 {
     public function livro($id_livro)
     {
+        $session = session();
+        if ($session->get('email') == null && $session->get('id_tipo_de_usuario') != 2) {
+            return redirect('/');
+        };
+
         $livrosModel = new \App\Models\LivrosModel();
         $livro = $livrosModel->getOne($id_livro)[0];
         return view('editar_livro', ["livro" => $livro]);
@@ -13,8 +18,13 @@ class Editar extends BaseController
 
     public function usuario($id_usuario)
     {
+        $session = session();
+        if ($session->get('email') == null) {
+            return redirect('/');
+        };
+
         $usuarioModel = new \App\Models\UsuariosModel();
-        $usuario = $usuarioModel->find($id_usuario);
+        $usuario = $usuarioModel->getOne($id_usuario);
         return view('editar_usuario', ["usuario" => $usuario]);
     }
 }

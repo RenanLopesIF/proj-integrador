@@ -13,10 +13,12 @@
 </head>
 
 <body>
-
+    <?php
+    echo $this->include('toast');
+    ?>
     <div class="container">
 
-        <form id="form" action="" method="POST">
+        <form id="form" action="<?= base_url('/atualizar/livro/' . $livro['id'])  ?>" method="POST">
             <div class="form-header">
                 <div class="title">
                     <h1>Editar livro</h1>
@@ -82,11 +84,6 @@
                 <div class="input-box">
                     <label for="lote">Código do lote</label>
                     <input value="<?= $livro["cod_lote"] ?>" id="lote" type="text" name="lote" placeholder="lote" required>
-                </div>
-
-                <div class="input-box">
-                    <label for="qtd">Quantidade de itens</label>
-                    <input value="<?= $livro["qtd"] ?>" id="qtd" type="text" name="qtd" placeholder="Quantidade de itens" required>
                 </div>
 
                 <div class="input-box">

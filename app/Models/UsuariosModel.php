@@ -24,6 +24,17 @@ class UsuariosModel extends Model
     protected $validationMessages = [];
     protected $skipValidation     = false;
 
+    public function getOne($id_usuario)
+    {
+        $db = \Config\Database::connect();
+        $query = " select * from usuarios u
+        inner join credenciais c ON c.id_usuario = u.id 
+        inner join enderecos e on e.id = u.id_endereco 
+        where u.id = :id_usuario:;";
+
+        return $db->query($query, ['id_usuario' => $id_usuario]);
+    }
+
     public function insertOne($dados)
     {
         $db = \Config\Database::connect();

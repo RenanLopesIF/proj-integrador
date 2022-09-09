@@ -10,7 +10,9 @@
             if (session('id_tipo_de_usuario') == 2) {
                 echo "<li><a href=" . base_url('/index.php/manusearlivros') . ">Manusear Livros</a></li>";
             }
+            echo "<li><a href=" . base_url('/index.php/editar/usuario') . ">Editar usuário</a></li>"
             ?>
+
         </ul>
     </nav>
     <a href="<?= base_url('/index.php/carrinho') ?>">

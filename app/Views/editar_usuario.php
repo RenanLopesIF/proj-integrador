@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?= base_url('/editar_usuario/css/edidar_usuario.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('editar_usuario/css/editar_usuario.css') ?>">
     <link rel="stylesheet" href="<?= base_url('/style.css') ?>">
     <title>Cadastro usuário</title>
 </head>
 
 <body>
     <div class="container">
-        <form id="form" action="" method="POST">
+        <form id="form" action="<?= base_url('/atualizar/usuario/' . $usuario['id'])  ?>" method="POST">
             <div class="form-header">
                 <div class="title">
                     <h1>Editar dados usuario</h1>
