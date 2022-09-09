@@ -121,8 +121,8 @@
                 </div>
             </div>
             <div class="registration-button">
-                <button type="submit" class="btn btn-warning bttwo">Continue</button>
-                <a href="<?= base_url("/") ?>"><button type="button" class="btn btn-warning bttwo">Logar-se</button></a>
+                <a href="<?= base_url("/") ?>"><button type="button" class="btn btn-warning bttwo">Já tenho uma conta</button></a>
+                <button type="submit" class="btn btn-warning bttwo">Cadastrar</button>
             </div>
         </form>
     </div>
