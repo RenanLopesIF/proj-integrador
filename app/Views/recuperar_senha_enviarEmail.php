@@ -32,7 +32,7 @@
                 <input id="email" type="email" name="email" placeholder="Email" required>
             </div>
             <div id='button-container'>
-                <a href="<?= base_url('Voltar') ?>">
+                <a href="<?= base_url('/') ?>">
                     <button id="enviandoEmail" type="button" class="btn btn-warning bttwo">Voltar</button>
                 </a>
                 <button id="enviandoEmail" type="submit" class="btn btn-warning bttwo">Enviar email</button>
