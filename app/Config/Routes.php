@@ -57,15 +57,16 @@ $routes->post('/cadastrar/lote/inserir', 'CadastroLote::inserir');
 $routes->post('/cadastrar/livro/inserir', 'CadastroLivro::inserir');
 $routes->post('/carrinho/inserir', 'Carrinho::insertItem');
 $routes->post('/pagamento/confirmar/(:alpha)', 'Pagamento::confirmaPagamento/$1');
+$routes->get('/recuperarsenha/enviaremail', 'EnviarEmail::index');
 $routes->post('/recuperarsenha/(:num)', 'RecuperarSenha::atualizaSenha/$1');
-
 $routes->post('/atualizar/livro/(:num)', 'AtualizaDados::livro/$1');
 $routes->post('/atualizar/usuario/(:num)', 'AtualizaDados::usuario/$1');
-
 
 $routes->get('/livros', 'Home::livros');
 $routes->get('/carrinho/items', 'Carrinho::getItems');
 $routes->get('/carrinho/remover/(:num)', 'Carrinho::removeItem/$1');
+
+// mudar
 
 
 /*

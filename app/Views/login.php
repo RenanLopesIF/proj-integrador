@@ -43,7 +43,7 @@
                     <button type="submit" class="btn btn-warning bttwo">Entrar</button>
                 </div>
             </form>
-            <p><a href="#">Esqueceu a senha?</a></p>
+            <p><a href="<?= base_url("/recuperarsenha") ?>">Esqueceu a senha?</a></p>
         </div>
     </div>
 
