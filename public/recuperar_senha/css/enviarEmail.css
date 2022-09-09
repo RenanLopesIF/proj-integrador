@@ -31,13 +31,19 @@ body {
 
 #sendEmail {
   text-align: center;
-  display: none;
   padding: 12px 10px;
-  background-color: rgb(78, 244, 169);
   margin: 20px 0;
-  transition: 10s ease;
-  opacity: 0;
 }
+
+.sendmail-success{
+  background-color: rgb(78, 244, 169);
+}
+
+.sendmail-fail{
+  background-color: rgb(253 73 73);
+}
+
+
 
 .data-field {
   display: flex;
@@ -80,3 +86,7 @@ body {
   color: white;
 }
 
+#button-container{
+  display: flex;
+  justify-content: space-between;
+}

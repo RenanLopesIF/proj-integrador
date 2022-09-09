@@ -14,18 +14,31 @@
 <body>
     <header id="header">
         <h1 class="titulo">Email para recuperação</h1>
-        <form action="<?= base_url("/recuperarsenha/enviaremail") ?>" method="get" id="form">
+        <form action="<?= base_url("/recuperarsenha/enviaremail") ?>" method="POST" id="form">
             <div class="data-field">
-                <div id="sendEmail">
-                    Email de recuperação enviado com sucesso
-                </div>
+                <?php
+                if (session()->getFlashdata('status') === "success") {
+                    echo '<div id="sendEmail" class="sendmail-success">
+                        Email de recuperação enviado com sucesso
+                        </div>';
+                };
+                if (session()->getFlashdata('status') === "fail") {
+                    echo '<div id="sendEmail" class="sendmail-fail">
+                    Houve um erro ao tentar enviar o email
+                    </div>';
+                };
+                ?>
                 <label id="labelEmail" for="email">Seu email:</label>
                 <input id="email" type="email" name="email" placeholder="Email" required>
             </div>
-            <button id="enviandoEmail" type="submit" class="btn btn-warning bttwo">Enviar email</button>
+            <div id='button-container'>
+                <a href="<?= base_url('Voltar') ?>">
+                    <button id="enviandoEmail" type="button" class="btn btn-warning bttwo">Voltar</button>
+                </a>
+                <button id="enviandoEmail" type="submit" class="btn btn-warning bttwo">Enviar email</button>
+            </div>
         </form>
     </header>
-    <script src="<?= base_url("/recuperar_senha/js/enviarEmail.js") ?>"></script>
 </body>
 
 </html>

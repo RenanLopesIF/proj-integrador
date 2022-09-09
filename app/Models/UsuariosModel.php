@@ -121,4 +121,11 @@ class UsuariosModel extends CredenciaisModel
             return false;
         }
     }
+
+    public function getIDByEmail($email)
+    {
+        $db = \Config\Database::connect();
+        $query = "SELECT id FROM usuarios WHERE email=:email:";
+        return $db->query($query, ["email" => $email])->getResultArray()[0]['id'];
+    }
 }

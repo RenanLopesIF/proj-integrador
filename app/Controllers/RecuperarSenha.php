@@ -43,16 +43,23 @@ class RecuperarSenha extends BaseController
 
     public function enviarEmail()
     {
+        $session = session();
+        $usuariosModel = new \App\Models\UsuariosModel();
         //Enviar processo para enviar email
         $email = \Config\Services::email();
+
+
         try {
+            $userEmail = $_POST['email'];
+            $id_usuario = $usuariosModel->getIDByEmail($userEmail);
+
             $email->setFrom('pilivrosdigitais@gmail.com', 'Livros Digitais');
-            $email->setTo($_POST['email']);
+            $email->setTo($userEmail);
             $email->setBCC('pilivrosdigitais@gmail.com');
 
             $email->setSubject('RECUPERAÇÃO DE SENHA');
 
-            $recoveryURL = "https://www.google.com/";
+            $recoveryURL = base_url("recuperarsenha/novasenha/$id_usuario");
             $emailMessage = '<h1>Recuperação de senha</h1>
                             <p>Olá</p>
                             <p>
@@ -68,10 +75,11 @@ class RecuperarSenha extends BaseController
             $email->setMessage($emailMessage);
             $email->send();
         } catch (\Throwable $th) {
-            //Se acontecer algum erro
-            return $email->printDebugger();
+            $session->setFlashdata(["status" => "fail"]);
+            return redirect("recuperarsenha");
         };
 
-        return $_POST['email'];
+        $session->setFlashdata(["status" => "success"]);
+        return redirect("recuperarsenha");
     }
 }
