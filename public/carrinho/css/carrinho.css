@@ -6,8 +6,8 @@
 
 body{
   width: 100%;
-  height: 100vh;
-  /* background-color: red; */
+  min-height: 100vh;
+  background-color: var(--color-cinza-600);
 }
 
 h1{
@@ -19,8 +19,9 @@ h1{
   display: flex;
   flex-direction: column;
   background-color: var(--color-cinza-600);
-  min-height: 100vh;
-  justify-self: stretch;
+  height: calc(100vh - 50px);
+  margin-top: 1.2rem;
+  justify-content: space-between;
 }
 /* header da pagina */
 .cabeca {
@@ -41,13 +42,13 @@ h1{
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
-  height: 100%;
+  height: fit-content;
 }
 /* alinhamento parte direita */
 .carrinho {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start ;
   align-items: center;
   width: 60%;
   height: 89%;
@@ -271,7 +272,6 @@ button img {
 .resumo {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   margin-top: 2rem;
   width: 25%;
   height: 79%;
@@ -372,6 +372,8 @@ button img {
   width: 100%;
   height: 70px;
   background-color: var(--color-cinza-900);
+  /* position: absolute;
+  bottom: 0; */
 }
 .rodape h1 {
   font-family: "Montserrat", sans-serif;

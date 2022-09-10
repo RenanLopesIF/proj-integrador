@@ -29,7 +29,7 @@ class CarrinhosModel extends LivrosCarrinhoModel
                 from livros_carrinho lc
                 inner join livros l on l.id = lc.id_livro
                 inner join estoque_livros el on l.cod_lote=el.cod
-                where lc.id_carrinho = (select id from carrinhos where id_usuario = :id_usuario:);";
+                where lc.id_carrinho = (select id from carrinhos where id_usuario = :id_usuario:)  and lc.`order` = -1;";
 
         $db = \Config\Database::connect();
         return $db->query($query, ['id_usuario' => $id_usuario])->getResultArray();

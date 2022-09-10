@@ -16,7 +16,7 @@
     ?>
     <header id="header">
         <div class="metodo">
-            <h1>Metodo de pagamento:</h1>
+            <h1>Método de pagamento:</h1>
             <div class="butons-metodo">
                 <button id="cartao">Cartão de crédito</button>
                 <button id="boleto">Boleto</button>

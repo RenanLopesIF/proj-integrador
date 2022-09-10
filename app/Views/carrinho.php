@@ -74,9 +74,8 @@
                 </div>
             </div>
         </div>
-
         <footer class="rodape">
-            <h1>Rodapé</h1>
+            <h1>©Loja Virtual 2022</h1>
         </footer>
     </div>
     <script src="<?= base_url("/carrinho/js/main.js") ?>"></script>

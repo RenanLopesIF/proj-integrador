@@ -31,15 +31,20 @@ class Pagamento extends BaseController
             'credito' => 1,
             'boleto' => 2
         ];
+        $parcelas = $_POST['parcelas'];
 
         if ($metodo == 'credito') {
             $status = 'pago';
         };
 
+        if ($metodo == 'boleto') {
+            $parcelas = 1;
+        };
+
         $res = $comprasModel->finalizarCompra([
             'id_usuario' => $session->get('id'),
             'forma_pgt' => $forma_pgt_map[$metodo],
-            'parcelas' => $_POST['parcelas'],
+            'parcelas' => $parcelas,
             'vencimento' => date('Y-m-d', $dueDate),
             'status' => $status
         ]);
