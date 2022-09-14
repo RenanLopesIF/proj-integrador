@@ -18,8 +18,8 @@ class RecuperarSenha extends BaseController
     {
         $session = session();
         $usuariosModel = new \App\Models\UsuariosModel();
-
-        $res = $usuariosModel->updatePasswordByUserID($_POST['id'], $_POST['password']);
+        $password = hash('md5', $_POST['password']);
+        $res = $usuariosModel->updatePasswordByUserID($_POST['id'],  $password);
 
         $flashDataSuccess = [
             'toast-color' => "#66cf66",

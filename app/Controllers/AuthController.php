@@ -8,7 +8,8 @@ class AuthController extends BaseController
     {
         $session = session();
         $usuariosModel = new \App\Models\UsuariosModel();
-        $res = $usuariosModel->getUser($_POST['username'], $_POST['password']);
+        $password = hash('md5', $_POST['password']);
+        $res = $usuariosModel->getUser($_POST['username'], $password);
         if (count($res) > 0) {
             foreach ($res[0] as $key => $value) {
                 $session->set($key, $value);
@@ -19,7 +20,7 @@ class AuthController extends BaseController
         $flashData = [
             'toast-color' => "#ff6262",
             'toast-msg' => "Usuário ou senha incorreto.",
-            'toast-msg-secondary' => "Tente novamente!"
+            'toast-msg-secondary' => "Tente novamente!",
         ];
 
         $session->setFlashdata($flashData);

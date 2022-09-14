@@ -14,6 +14,7 @@ class CadastroUsuario extends BaseController
     {
         $session = session();
         $usuariosModel = new \App\Models\UsuariosModel();
+        $_POST['password'] = hash('md5', $_POST['password']);
         $res = $usuariosModel->insertOne($_POST);
 
         $flashDataSuccess = [

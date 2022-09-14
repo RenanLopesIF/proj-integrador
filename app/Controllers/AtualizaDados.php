@@ -51,7 +51,7 @@ class AtualizaDados extends BaseController
         $res = $usuarioModel->updateOne($id_usuario, [
             "usuario" => $usuarioDado,
             "endereco" => $enderecoDado,
-            "new_password" => $_POST['password']
+            "new_password" => hash('md5', $_POST['password'])
         ]);
 
         $flashDataSuccess = [
