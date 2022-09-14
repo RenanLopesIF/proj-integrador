@@ -1,0 +1,13 @@
+1 muito fácil
+3 fácil -1:30h
+5 médio -6h
+7 médio-dificil -10h
+9 difícil 
+13 quase impossivel
+
+
+5 -5
+3 -2
+7 -1
+
+

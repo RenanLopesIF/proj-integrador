@@ -1,0 +1,39 @@
+*Visibilidade do Status do Sistema
+	Todas as telas contém um título informando ao usuário em qual ambiente está, 
+	além de que o site foi desenvolvido por sessões, por exemplo: para editar ou adicionar
+ 	um livro o usuário entrar na interface "Manusear livros".
+
+*Compatibilidade entre o sistema e o mundo real
+	Para fácil entendimento do usuário, os cartões dos livros foram desenvolvidos de forma a
+	se parecer com um livro real e também há a implementação de icones intuitívos como o carrinho
+	que leva para o carrinho de compras do usuário.
+
+*Controle e liberdade para o usuário
+	Na aplicação há um sistema de recuperação de senha para caso necessário e também, no carrinho
+	de compras, o usuário pode excluir um item caso adicione por engano.
+
+*Consistência e Padronização
+	Todos os campos de inserção de dados do site seguem um padrão de design além de
+	que toda a aplicação seguem um padrão para cores de fundo, cores de títulos e textos
+	definidos no início do projeto.
+
+*Prevenção de erros
+	O sistema foi produzido de forma a não deixar que o usuário altere dados dos livros ou
+	dos usuário de forma incorreta, retornando-os uma mensagem de erro.
+
+*Reconhecimento em vez de memorização 
+	Alguns componentes foram desenvolvidos visando os padrões mais utilizados nas lojas
+	onlines para que o usuário já olhe e entenda qual informação está tendando ser passada
+
+
+*Estética e design minimalista
+	As interfaces foram desenvolvidas com menor número de informações possíveis para ser bastante
+	direto com objetivo final.
+
+
+
+
+
+
+
+	
