@@ -69,7 +69,7 @@ class UsuariosModel extends CredenciaisModel
 
             $usuarioDados = [
                 "id_endereco" => $idEndereco,
-                "id_tipo_de_usuario" => 2,
+                "id_tipo_de_usuario" => 1,
                 "nome" => $dados["nome"],
                 "cpf" => $dados["cpf"],
                 "email" => $dados["email"],
