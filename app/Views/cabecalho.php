@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="<?= base_url("/style.css") ?>">
 
 <div class="vtr-navigation">
-    <h2>Loja virtual</h2>
+    <h2>Jardim dos Livros</h2>
     <nav class="navbar">
         <ul class="menu">
             <li><a href="<?= base_url('/index.php/home') ?>">Home</a></li>
